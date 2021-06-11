@@ -22,8 +22,10 @@
         "prettier"
     ],
     "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"],
-        "prettier/prettier": ["error"]
+        "react/react-in-jsx-scope": "off",
+        "prettier/prettier": ["error"],
+        "react/jsx-filename-extension": [2, { "extensions": [
+            ".js", ".jsx", ".ts", ".tsx"
+        ] }]
     }
 }
