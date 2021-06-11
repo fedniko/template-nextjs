@@ -1,6 +1,6 @@
 ## Шаги настройки проекта
 
-#### Настройка eslint
+### Настройка eslint
 
 ```shell
 npx create-next-app --typescript
@@ -57,3 +57,11 @@ npm i -g mrm mrm-task-lint-staged
 npx mrm lint-staged
 ```
 
+Обновить файл `package.json`
+```json
+{
+  "lint-staged": {
+    "pages/**/*.{js,jsx,ts,tsx,json}": "eslint --cache --fix"
+  }
+}
+```
