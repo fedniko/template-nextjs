@@ -16,4 +16,7 @@ npx eslint --init
 - √ What format do you want your config file to be in? · JSON
 - √ Would you like to install them now with npm? · Yes
 
+```shell
+npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
+```
 
