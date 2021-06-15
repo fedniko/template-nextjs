@@ -54,7 +54,7 @@ export default function MainLayout({ children }: { children: any }) {
             <Col
               xl="9"
               lg="10"
-              md="11"
+              md="12"
               sm="12"
               xs="12"
               className="header__links__bottom"
@@ -88,14 +88,14 @@ export default function MainLayout({ children }: { children: any }) {
       <footer className="footer">
         <Container className="footer__container">
           <Row className="footer__top">
-            <Col xl="9">
+            <Col xl="8" lg="8" md="8" sm="12" xs="12">
               <Row className="footer__top__header">
                 <Col xl="12">
                   <p className="text footer__text">Lorem</p>
                 </Col>
               </Row>
               <Row className="footer__top__links">
-                <Col xl="12" lg="5" md="7" sm="8" xs="12">
+                <Col xl="12" lg="12" md="12" sm="12" xs="12">
                   <div className="footer__links">
                     <Link href="/">
                       <a className="text footer__text">Lorem ipsum</a>
@@ -119,16 +119,16 @@ export default function MainLayout({ children }: { children: any }) {
                 </Col>
               </Row>
             </Col>
-            <Col xl={{ span: 3, offset: 0 }}>
+            <Col xl="4" lg="4" md="4" sm="12" xs="12">
               <Row className="footer__phone">
-                <Col xl="12">
+                <Col xl="12" lg="12" md="12" sm="12" xs="12">
                   <a className="text footer__text footer__phone_text">
                     +7 999 999-99-99
                   </a>
                 </Col>
               </Row>
               <Row className="footer__phone__bottom_text">
-                <Col xl="12">
+                <Col xl="12" lg="12" md="12" sm="12" xs="12">
                   <p className="text footer__text">Ежедневно с 9:00 до 17:00</p>
                 </Col>
               </Row>

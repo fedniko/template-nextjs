@@ -44,5 +44,14 @@
   justify-content: space-between;
   text-transform: uppercase;
   margin-top: 11px;
-  line-height: 38.5px;
+  line-height: 120%;
+  flex-wrap: wrap;
+}
+
+.header__links__bottom a{
+  margin-right: 20px;
+}
+
+.header__links__bottom a:last-child{
+  margin-right: 0;
 }
