@@ -115,7 +115,10 @@ export default function MainLayout({ children }: { children: any }) {
             <Col xl="4" lg="4" md="4" sm="12" xs="12">
               <Row className="footer__phone">
                 <Col>
-                  <a className="text footer__text footer__phone_text">
+                  <a
+                    className="text footer__text footer__phone_text"
+                    href="tel:+79999999999"
+                  >
                     +7 999 999-99-99
                   </a>
                 </Col>
