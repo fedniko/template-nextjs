@@ -7,7 +7,7 @@ export default function MainLayout({ children }: { children: any }) {
       <header className="header">
         <Container>
           <Row>
-            <Col xl="1" lg="4" md="5" sm="5" xs="5" className="header__logo">
+            <Col xl="1" lg="1" md="2" sm="3" xs="3" className="header__logo">
               <Link href="/">
                 <a>
                   <img
@@ -18,7 +18,7 @@ export default function MainLayout({ children }: { children: any }) {
                 </a>
               </Link>
             </Col>
-            <Col xl="4" lg="4" md="5" sm="4" xs="4" className="header__links">
+            <Col xl="4" lg="5" md="6" sm="8" xs="8" className="header__links">
               <Link href="/">
                 <a className="text">Lorem ipsum dolor</a>
               </Link>
@@ -28,10 +28,10 @@ export default function MainLayout({ children }: { children: any }) {
             </Col>
             <Col
               xl={{ span: 1, offset: 6 }}
-              lg="4"
-              md="2"
-              sm="3"
-              xs="3"
+              lg={{ span: 1, offset: 5 }}
+              md={{ span: 1, offset: 3 }}
+              sm={{ span: 1, offset: 0 }}
+              xs={{ span: 1, offset: 0 }}
               className="header__search"
             >
               <Link href="/">
@@ -53,10 +53,10 @@ export default function MainLayout({ children }: { children: any }) {
           <Row>
             <Col
               xl="9"
-              lg="9"
-              md="9"
-              sm="9"
-              xs="9"
+              lg="10"
+              md="11"
+              sm="12"
+              xs="12"
               className="header__links__bottom"
             >
               <Link href="/">
