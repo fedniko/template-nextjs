@@ -5,7 +5,12 @@
     },
     "extends": [
         "plugin:react/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
         "airbnb",
+        "plugin:import/typescript",
+        "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
         "prettier"
     ],
     "parser": "@typescript-eslint/parser",
@@ -26,6 +31,9 @@
         "prettier/prettier": ["error"],
         "react/jsx-filename-extension": [2, { "extensions": [
             ".js", ".jsx", ".ts", ".tsx"
-        ] }]
+        ] }],
+        "react/prop-types": 0,
+        "jsx-a11y/anchor-is-valid": 0,
+        "import/extensions": 0
     }
 }
