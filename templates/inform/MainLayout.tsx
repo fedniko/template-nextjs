@@ -51,14 +51,7 @@ export default function MainLayout({ children }: { children: any }) {
         <div className="header__top" />
         <Container>
           <Row>
-            <Col
-              xl="9"
-              lg="10"
-              md="12"
-              sm="12"
-              xs="12"
-              className="header__links__bottom"
-            >
+            <div className="header__links__bottom">
               <Link href="/">
                 <a className="text">Lorem ipsum</a>
               </Link>
@@ -80,7 +73,7 @@ export default function MainLayout({ children }: { children: any }) {
               <Link href="/">
                 <a className="text">Lorem</a>
               </Link>
-            </Col>
+            </div>
           </Row>
         </Container>
       </header>
