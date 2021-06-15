@@ -83,12 +83,12 @@ export default function MainLayout({ children }: { children: any }) {
           <Row className="footer__top">
             <Col xl="8" lg="8" md="8" sm="12" xs="12">
               <Row className="footer__top__header">
-                <Col xl="12">
+                <Col>
                   <p className="text footer__text">Lorem</p>
                 </Col>
               </Row>
               <Row className="footer__top__links">
-                <Col xl="12" lg="12" md="12" sm="12" xs="12">
+                <Col>
                   <div className="footer__links">
                     <Link href="/">
                       <a className="text footer__text">Lorem ipsum</a>
@@ -114,20 +114,115 @@ export default function MainLayout({ children }: { children: any }) {
             </Col>
             <Col xl="4" lg="4" md="4" sm="12" xs="12">
               <Row className="footer__phone">
-                <Col xl="12" lg="12" md="12" sm="12" xs="12">
+                <Col>
                   <a className="text footer__text footer__phone_text">
                     +7 999 999-99-99
                   </a>
                 </Col>
               </Row>
               <Row className="footer__phone__bottom_text">
-                <Col xl="12" lg="12" md="12" sm="12" xs="12">
+                <Col>
                   <p className="text footer__text">Ежедневно с 9:00 до 17:00</p>
                 </Col>
               </Row>
             </Col>
           </Row>
         </Container>
+        <div className="footer__middle">
+          <Container className="footer__middle__container">
+            <Row>
+              <Col
+                xl="7"
+                lg="8"
+                md="9"
+                sm="12"
+                xs="12"
+                className="footer__middle__links"
+              >
+                <div className="footer__middle__links__item">
+                  <h2 className="text footer__text">Для физических лиц</h2>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                </div>
+                <div className="footer__middle__links__item">
+                  <h2 className="text footer__text">Для юридических лиц</h2>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                </div>
+                <div className="footer__middle__links__item">
+                  <h2 className="text footer__text">Информация</h2>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text footer__text">Lorem ipsum</a>
+                  </Link>
+                </div>
+              </Col>
+              <Col
+                xl={{ span: 4, offset: 1 }}
+                lg={{ span: 4, offset: 0 }}
+                md={{ span: 3, offset: 0 }}
+                sm="12"
+                xs="12"
+              >
+                <p className="text footer__text footer__middle__last">
+                  Lorem ipsum dolor sit amet
+                  <br /> Lorem ipsum
+                  <br /> Lorem ipsum
+                  <br /> Lorem ipsum dolor sit amet, consectetur
+                  <br /> Тел.: 8(800)000-00-00
+                  <br /> Email: example@mail.ru
+                  <br /> Адрес: г. Москва, ул. Большая, 1
+                </p>
+              </Col>
+            </Row>
+          </Container>
+          <Container className="footer__bottom__container">
+            <Row>
+              <Col>
+                <p className="text footer__text">
+                  © 2016-2021 АЭБ АйТи. Все права защищены.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </div>
       </footer>
     </>
   );
