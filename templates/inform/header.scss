@@ -1,9 +1,14 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
+  //position: absolute;
+  //top: 0;
+  //left: 0;
   width: 100%;
   margin-top: 27px;
+  margin-bottom: 100px;
+}
+
+.header a:hover {
+  color: #007BFF;
 }
 
 .header__logo {
@@ -25,7 +30,7 @@
 
 .header__search {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 

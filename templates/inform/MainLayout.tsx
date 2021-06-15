@@ -85,34 +85,57 @@ export default function MainLayout({ children }: { children: any }) {
         </Container>
       </header>
       <main>{children}</main>
-      {/* <footer className="footer"> */}
-      {/*  <Container className="footer__container"> */}
-      {/*    <Row> */}
-      {/*      <Col xl="5" lg="5" md="7" sm="8" xs="12"> */}
-      {/*        <div className="footer__links"> */}
-      {/*          <Link href="#!"> */}
-      {/*            <a className="text footer__links__item">Lorem</a> */}
-      {/*          </Link> */}
-      {/*          <Link href="#!"> */}
-      {/*            <a className="text footer__links__item">Lorem</a> */}
-      {/*          </Link> */}
-      {/*          <Link href="#!"> */}
-      {/*            <a className="text footer__links__item">Lorem</a> */}
-      {/*          </Link> */}
-      {/*          <Link href="#!"> */}
-      {/*            <a className="text footer__links__item">Lorem</a> */}
-      {/*          </Link> */}
-      {/*          <Link href="#!"> */}
-      {/*            <a className="text footer__links__item">Lorem</a> */}
-      {/*          </Link> */}
-      {/*          <Link href="#!"> */}
-      {/*            <a className="text footer__links__item">Lorem</a> */}
-      {/*          </Link> */}
-      {/*        </div> */}
-      {/*      </Col> */}
-      {/*    </Row> */}
-      {/*  </Container> */}
-      {/* </footer> */}
+      <footer className="footer">
+        <Container className="footer__container">
+          <Row className="footer__top">
+            <Col xl="9">
+              <Row className="footer__top__header">
+                <Col xl="12">
+                  <p className="text footer__text">Lorem</p>
+                </Col>
+              </Row>
+              <Row className="footer__top__links">
+                <Col xl="12" lg="5" md="7" sm="8" xs="12">
+                  <div className="footer__links">
+                    <Link href="/">
+                      <a className="text footer__text">Lorem ipsum</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Lorem</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Lorem ipsum</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Lorem ipsum</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Lorem ipsum</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Lorem ipsum</a>
+                    </Link>
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+            <Col xl={{ span: 3, offset: 0 }}>
+              <Row className="footer__phone">
+                <Col xl="12">
+                  <a className="text footer__text footer__phone_text">
+                    +7 999 999-99-99
+                  </a>
+                </Col>
+              </Row>
+              <Row className="footer__phone__bottom_text">
+                <Col xl="12">
+                  <p className="text footer__text">Ежедневно с 9:00 до 17:00</p>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      </footer>
     </>
   );
 }
