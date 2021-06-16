@@ -125,7 +125,7 @@ export default function MainLayout({ children }: { children: any }) {
               </Row>
               <Row className="footer__phone__bottom_text">
                 <Col>
-                  <p className="text footer__text">Ежедневно с 9:00 до 17:00</p>
+                  <p className="text footer__text">Lorem ipsum dolor sit</p>
                 </Col>
               </Row>
             </Col>
@@ -143,7 +143,7 @@ export default function MainLayout({ children }: { children: any }) {
                 className="footer__middle__links"
               >
                 <div className="footer__middle__links__item">
-                  <h2 className="text footer__text">Для физических лиц</h2>
+                  <h2 className="text footer__text">Lorem ipsum dolor</h2>
                   <Link href="/">
                     <a className="text footer__text">Lorem ipsum</a>
                   </Link>
@@ -167,7 +167,7 @@ export default function MainLayout({ children }: { children: any }) {
                   </Link>
                 </div>
                 <div className="footer__middle__links__item">
-                  <h2 className="text footer__text">Для юридических лиц</h2>
+                  <h2 className="text footer__text">Lorem ipsum dolor</h2>
                   <Link href="/">
                     <a className="text footer__text">Lorem ipsum</a>
                   </Link>
@@ -179,7 +179,7 @@ export default function MainLayout({ children }: { children: any }) {
                   </Link>
                 </div>
                 <div className="footer__middle__links__item">
-                  <h2 className="text footer__text">Информация</h2>
+                  <h2 className="text footer__text">Lorem</h2>
                   <Link href="/">
                     <a className="text footer__text">Lorem ipsum</a>
                   </Link>
