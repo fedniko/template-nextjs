@@ -2,6 +2,7 @@ import '../styles/globals.scss';
 import '../templates/inform/header.scss';
 import '../templates/inform/footer.scss';
 import '../templates/inform/aboutUs/aboutUs.scss';
+import '../templates/inform/partners/partners.scss';
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
