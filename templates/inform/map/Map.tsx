@@ -36,6 +36,7 @@ export default function Maps() {
                   <Placemark
                     modules={['geoObject.addon.balloon']}
                     geometry={coordinate}
+                    key={coordinate.toString()}
                     properties={{
                       balloonContentHeader: 'АЭБ АйТи',
                       balloonContentBody:
