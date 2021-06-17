@@ -1,0 +1,75 @@
+.main__carousel {
+  margin-bottom: 100px;
+  background-color: #fcfbf8;
+  cursor: grab;
+}
+
+.main__carousel__container {
+  margin-top: 43px;
+}
+
+.main__carousel__heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.main__carousel__text {
+  font-weight: normal;
+  font-size: 18px;
+  color: #3B4348;
+}
+
+.main__carousel__span {
+  font-size: 24px;
+  color: #007BFF;
+}
+
+.main__carousel__button {
+  margin-top: 66px;
+  border: 1px solid #007BFF;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 130%;
+  width: 50%;
+  padding: .8rem 1rem;
+}
+
+.main__carousel__img {
+  max-width: 100%;
+}
+
+//Расположение точек (Absolute - по умолчанию)
+.main__carousel .slick-dots {
+  bottom: 20px;
+}
+
+//Отступ между точками
+.main__carousel .slick-dots li {
+  margin: 0 4px;
+}
+
+//Неактивные точки
+.main__carousel .slick-dots li button:before {
+  font-size: 8px;
+  color: #CCCCCC;
+  opacity: 1;
+}
+
+//Неактивные точки
+.main__carousel .slick-dots li.slick-active button:before {
+  font-size: 13px;
+  opacity: 1;
+  color: #007BFF;
+}
+
+//Последняя нажатая точка
+.main__carousel .slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+//Фокус и ховер точки
+.main__carousel .slick-dots li.slick-active button:focus:before,  .main__carousel .slick-dots li button:hover:before {
+  opacity: 1;
+  color: #007BFF;
+}
