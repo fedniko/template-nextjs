@@ -7,13 +7,13 @@ export default function Services() {
     dots: false,
     arrows: true,
     infinite: false,
-    speed: 800,
+    speed: 200,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false,
     fade: false,
     waitForAnimate: false,
-    touchThreshold: 60,
+    touchThreshold: 15,
     responsive: [
       {
         breakpoint: 576,
@@ -21,6 +21,7 @@ export default function Services() {
           fade: true,
           arrows: false,
           dots: true,
+          speed: 800,
           slidesToShow: 1,
         },
       },
