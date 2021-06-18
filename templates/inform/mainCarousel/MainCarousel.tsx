@@ -10,7 +10,7 @@ export default function MainCarousel() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 5000,
     fade: false,
     pauseOnDotsHover: true,
     pauseOnFocus: true,
@@ -86,7 +86,7 @@ export default function MainCarousel() {
                 <Button
                   variant="outline-primary"
                   size="lg"
-                  className="text main__carousel__button"
+                  className="button main__carousel__button"
                 >
                   Подробнее
                 </Button>{' '}
@@ -122,7 +122,7 @@ export default function MainCarousel() {
                 <Button
                   variant="outline-primary"
                   size="lg"
-                  className="text main__carousel__button"
+                  className="button main__carousel__button"
                 >
                   Подробнее
                 </Button>{' '}
@@ -158,7 +158,7 @@ export default function MainCarousel() {
                 <Button
                   variant="outline-primary"
                   size="lg"
-                  className="text main__carousel__button"
+                  className="button main__carousel__button"
                 >
                   Подробнее
                 </Button>{' '}
