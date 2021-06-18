@@ -1,0 +1,144 @@
+.services {
+  margin-bottom: 100px;
+  cursor: grab;
+}
+
+.services__link {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+  color: #3B4348;
+}
+
+.services__carousel__item {
+  background: #E8F2FF;
+  border-radius: 15px;
+  width: 280px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.services__carousel__item.second {
+  background: #F4E6D6;
+}
+
+.services__carousel__item.third {
+  background: #F1F1F1;
+}
+
+.services__carousel__item.fourth {
+  background: #F1E9F6;
+}
+
+.services__carousel__body {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50%;
+}
+
+.services__carousel__h5 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3B4348;
+  margin-bottom: 10px;
+}
+
+.services__carousel__heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+.services__carousel__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.services__carousel__text.main {
+  margin-bottom: 10px;
+}
+
+.services__carousel__span {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.services__carousel__image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50%;
+}
+
+.services__carousel__image_item {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.services .slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.services .slick-prev:before, .services .slick-next:before {
+  color: #007BFF;
+  font-size: 50px;
+  //text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.services .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+  opacity: 0;
+  cursor: default;
+}
+
+.services .slick-prev, .services .slick-next {
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+//Расположение точек (Absolute - по умолчанию)
+.services .slick-dots {
+  bottom: -40px;
+}
+
+//Отступ между точками
+.services .slick-dots li {
+  margin: 0 4px;
+}
+
+//Неактивные точки
+.services .slick-dots li button:before {
+  font-size: 8px;
+  color: #CCCCCC;
+  opacity: 1;
+}
+
+//Неактивные точки
+.services .slick-dots li.slick-active button:before {
+  font-size: 13px;
+  opacity: 1;
+  color: #007BFF;
+}
+
+//Последняя нажатая точка
+.services .slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+//Фокус и ховер точки
+.services .slick-dots li.slick-active button:focus:before,  .main__carousel .slick-dots li button:hover:before {
+  opacity: 1;
+  color: #007BFF;
+}

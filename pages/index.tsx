@@ -6,6 +6,7 @@ import Maps from '../templates/inform/map/Map';
 import MainCarousel from '../templates/inform/mainCarousel/MainCarousel';
 import Promotions from '../templates/inform/promotions/Promotions';
 import ContactUs from '../templates/inform/contactUs/ContactUs';
+import Services from '../templates/inform/services/Services';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <MainCarousel />
         <AboutUs />
         <Partners />
+        <Services />
         <Promotions />
         <Maps />
         <ContactUs />
