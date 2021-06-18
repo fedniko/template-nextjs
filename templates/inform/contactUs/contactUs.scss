@@ -1,0 +1,89 @@
+.contactUs {
+  margin-bottom: 100px;
+}
+
+.contactUs__item {
+  background: #F9F9F9;
+  border-radius: 10px;
+}
+
+.contactUs__item__left {
+  padding: 40px;
+  text-align: center;
+  max-height: 311px;
+}
+
+.contactUs__heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 8px;
+}
+
+.contactUs__text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 120%;
+  margin-bottom: 44px;
+}
+
+.contactUs__inputs {
+  margin-bottom: 12px;
+}
+
+.contactUs__floatingInput_label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #AAAEB3;
+}
+
+.contactUs__input {
+  border: none;
+  border-radius: 10px;
+}
+
+.contactUs__input:focus {
+  border: 1px solid #007BFF;
+  box-shadow: 0 0 0 0.25rem rgb(0 123 255 / 25%);
+}
+
+.contactUs__text_mini {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 140%;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.contactUs__button {
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+.contactUs__span {
+  font-weight: 500;
+}
+
+.contactUs__item__right {
+  background: #F2F2F2;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  max-height: 311px;
+}
+
+.contactUs__text.right {
+  margin-bottom: 78px;
+}
+
+.contactUs__heading.right {
+  margin-bottom: 20px;
+}
+
+.contactUs__button.right {
+  width: 100%;
+  padding: 1rem 1rem;
+}
