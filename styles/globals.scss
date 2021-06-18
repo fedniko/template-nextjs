@@ -56,6 +56,29 @@ p, h1, h2 {
   line-height: 120%;
 }
 
+.heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 130%;
+}
+
+.heading-div {
+  margin-bottom: 40px;
+}
+
+.button {
+  border: 1px solid #007BFF;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  width: 50%;
+  padding: .8rem 1rem;
+}
+
 a:hover {
   color: #007BFF;
 }

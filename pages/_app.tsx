@@ -7,6 +7,7 @@ import '../templates/inform/map/map.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../templates/inform/mainCarousel/mainCarousel.scss';
+import '../templates/inform/promotions/promotions.scss';
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {

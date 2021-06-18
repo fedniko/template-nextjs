@@ -20,9 +20,11 @@ export default function Maps() {
   return (
     <section className="map">
       <Container>
-        <Row>
+        <Row className="heading-div">
           <Col>
-            <h1 className="text map__heading">Lorem ipsum dolor</h1>
+            <h1 className="heading" style={{ textAlign: 'center' }}>
+              Lorem ipsum dolor
+            </h1>
           </Col>
         </Row>
         <Row>

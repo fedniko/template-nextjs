@@ -50,7 +50,7 @@ export default function MainCarousel() {
                 <Button
                   variant="outline-primary"
                   size="lg"
-                  className="text main__carousel__button"
+                  className="button main__carousel__button"
                 >
                   Подробнее
                 </Button>{' '}
