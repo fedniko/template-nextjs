@@ -10,6 +10,7 @@ import '../templates/inform/services/services.scss';
 import '../templates/inform/promotions/promotions.scss';
 import '../templates/inform/map/map.scss';
 import '../templates/inform/contactUs/contactUs.scss';
+import '../templates/inform/news/news.scss';
 
 import type { AppProps } from 'next/app';
 

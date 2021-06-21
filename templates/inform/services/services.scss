@@ -114,7 +114,7 @@
 }
 
 //Скрывать стрелку когда она неактивна
-.services .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+.services .slick-prev.slick-disabled:before, .services .slick-next.slick-disabled:before {
   opacity: 0;
   cursor: default;
 }
@@ -156,7 +156,7 @@
 }
 
 //Фокус и ховер точки
-.services .slick-dots li.slick-active button:focus:before,  .main__carousel .slick-dots li button:hover:before {
+.services .slick-dots li.slick-active button:focus:before, .services .slick-dots li button:hover:before {
   opacity: 1;
   color: #007BFF;
 }
