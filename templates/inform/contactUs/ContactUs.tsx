@@ -49,25 +49,25 @@ export default function ContactUs() {
                   </div>
                 </Col>
               </Row>
+              <Row className="align-items-center">
+                <Col>
+                  <p className="text contactUs__text_mini">
+                    Нажимая на кнопку «Заказать консультацию», я соглашаюсь с
+                    условиями обработки персональных данных
+                  </p>
+                </Col>
+                <Col>
+                  <Button
+                    type="submit"
+                    variant="outline-primary"
+                    size="lg"
+                    className="button contactUs__button"
+                  >
+                    Заказать консультацию
+                  </Button>{' '}
+                </Col>
+              </Row>
             </form>
-            <Row className="align-items-center">
-              <Col>
-                <p className="text contactUs__text_mini">
-                  Нажимая на кнопку «Заказать консультацию», я соглашаюсь с
-                  условиями обработки персональных данных
-                </p>
-              </Col>
-              <Col>
-                <Button
-                  type="submit"
-                  variant="outline-primary"
-                  size="lg"
-                  className="button contactUs__button"
-                >
-                  Заказать консультацию
-                </Button>{' '}
-              </Col>
-            </Row>
           </Col>
           <Col
             md="6"

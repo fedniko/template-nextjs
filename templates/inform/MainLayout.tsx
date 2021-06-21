@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Navbar, Nav } from 'react-bootstrap';
 
 export default function MainLayout({ children }: { children: any }) {
   return (
@@ -50,31 +50,34 @@ export default function MainLayout({ children }: { children: any }) {
         </Container>
         <div className="header__top" />
         <Container>
-          <Row>
-            <div className="header__links__bottom">
-              <Link href="/">
-                <a className="text">Lorem ipsum</a>
-              </Link>
-              <Link href="/">
-                <a className="text">Lorem ipsum</a>
-              </Link>
-              <Link href="/">
-                <a className="text">Lorem ipsum</a>
-              </Link>
-              <Link href="/">
-                <a className="text">Lorem ipsum</a>
-              </Link>
-              <Link href="/">
-                <a className="text">Lorem</a>
-              </Link>
-              <Link href="/">
-                <a className="text">Lorem ipsum</a>
-              </Link>
-              <Link href="/">
-                <a className="text">Lorem</a>
-              </Link>
-            </div>
-          </Row>
+          <Navbar expand="md">
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <Link href="/">
+                  <a className="nav-link text">Lorem ipsum</a>
+                </Link>
+                <Link href="/">
+                  <a className="nav-link text">Lorem ipsum</a>
+                </Link>
+                <Link href="/">
+                  <a className="nav-link text">Lorem ipsum</a>
+                </Link>
+                <Link href="/">
+                  <a className="nav-link text">Lorem ipsum</a>
+                </Link>
+                <Link href="/">
+                  <a className="nav-link text">Lorem</a>
+                </Link>
+                <Link href="/">
+                  <a className="nav-link text">Lorem ipsum</a>
+                </Link>
+                <Link href="/">
+                  <a className="nav-link text">Lorem</a>
+                </Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
         </Container>
       </header>
       <main>{children}</main>

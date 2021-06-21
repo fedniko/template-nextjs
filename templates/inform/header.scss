@@ -7,6 +7,14 @@
   margin-bottom: 27px;
 }
 
+.header .navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  margin-top: 11px;
+  line-height: 120%;
+}
+
 .header a:hover {
   color: #007BFF;
 }
@@ -26,6 +34,11 @@
   justify-content: space-around;
   align-items: center;
   text-transform: uppercase;
+  color: #000000;
+}
+
+.header .mr-auto a:first-child {
+  padding-left: 0;
 }
 
 .header__search {
@@ -37,20 +50,4 @@
 .header__top {
   margin-top: 24px;
   border-bottom: 0.5px solid #D9D9D9;
-}
-
-.header__links__bottom {
-  display: flex;
-  text-transform: uppercase;
-  margin-top: 11px;
-  line-height: 120%;
-  flex-wrap: wrap;
-}
-
-.header__links__bottom a{
-  margin-right: 30px;
-}
-
-.header__links__bottom a:last-child{
-  margin-right: 0;
 }
