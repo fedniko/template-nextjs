@@ -58,7 +58,7 @@ export default function Services() {
             </Link>
           </Col>
         </Row>
-        <Row>
+        <Row className="services__carousel">
           <Col>
             <Slider {...settings}>
               <>
