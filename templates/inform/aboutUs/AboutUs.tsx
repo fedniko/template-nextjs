@@ -4,8 +4,8 @@ export default function AboutUs() {
   return (
     <section className="aboutUs">
       <Container>
-        <Row>
-          <Col xl="7" lg="7" md="7" sm="7" xs="7" className="aboutUs__left">
+        <Row className="align-items-center">
+          <Col md="7" xs="12" className="aboutUs__left">
             <h1 className="text aboutUs__heading">Lorem ipsum dolor sit?</h1>
             <p className="text aboutUs__text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum fuga
@@ -19,11 +19,9 @@ export default function AboutUs() {
             </p>
           </Col>
           <Col
-            xl={{ span: 4, offset: 1 }}
             lg={{ span: 4, offset: 1 }}
-            md={{ span: 4, offset: 1 }}
-            sm={{ span: 4, offset: 1 }}
-            xs={{ span: 4, offset: 1 }}
+            md={{ span: 5, offset: 0 }}
+            xs={{ span: 12, offset: 0 }}
             className="aboutUs__right"
           >
             <div className="aboutUs__right__item">

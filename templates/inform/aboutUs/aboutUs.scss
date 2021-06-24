@@ -24,7 +24,7 @@
 .aboutUs__right {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
 .aboutUs__text_small {
@@ -37,10 +37,17 @@
 .aboutUs__right__item {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .aboutUs__img {
   height: 31px;
   width: 30%;
+}
+
+@media (max-width: 767px) {
+  .aboutUs__text {
+    margin-bottom: 20px;
+  }
 }
