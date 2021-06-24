@@ -12,7 +12,6 @@
 .contactUs__item__left {
   padding: 40px;
   text-align: center;
-  max-height: 311px;
 }
 
 .contactUs__heading {
@@ -74,7 +73,6 @@
   border-bottom-right-radius: 15px;
   padding: 40px;
   text-align: center;
-  max-height: 311px;
 }
 
 .contactUs__text.right {
@@ -88,4 +86,36 @@
 .contactUs__button.right {
   width: 100%;
   padding: 1rem 1rem;
+}
+
+@media (max-width: 991px) {
+  .contactUs__floatingInput_label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contactUs__item__right {
+    background: #F2F2F2;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .contactUs__inputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactUs__input {
+    margin-bottom: 15px;
+  }
+
+  .contactUs__text_mini {
+    margin-bottom: 20px;
+  }
 }

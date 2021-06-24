@@ -4,11 +4,11 @@ export default function ContactUs() {
   return (
     <section className="contactUs">
       <Container>
-        <Row className="align-items-center contactUs__item">
+        <Row className="contactUs__item">
           <Col
-            md="6"
+            md="7"
             lg="7"
-            className="contactUs__item__left d-flex flex-column justify-content-center"
+            className="contactUs__item__left d-flex flex-column justify-content-center align-items-center"
           >
             <h2 className="contactUs__heading">Lorem ipsum?</h2>
             <p className="text contactUs__text">Lorem ipsum dolor</p>
@@ -70,7 +70,7 @@ export default function ContactUs() {
             </form>
           </Col>
           <Col
-            md="6"
+            md="5"
             lg={{ span: 5, offset: 0 }}
             xl={{ span: 5, offset: 0 }}
             className="contactUs__item__right d-flex flex-column justify-content-center align-items-center"
