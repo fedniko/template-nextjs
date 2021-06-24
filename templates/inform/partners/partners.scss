@@ -16,7 +16,7 @@
   margin-bottom: 48px;
 }
 
-.partners__icons__top {
+.partners__icons {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 50% 50%;
@@ -44,4 +44,26 @@
   margin-top: auto;
   margin-bottom: auto;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .partners .container {
+    max-width: none;
+  }
+
+  .partners__icons {
+    grid-template-columns: repeat( 12, minmax(200px, 1fr) );
+    grid-template-rows: none;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .partners__icons__item {
+    grid-column: auto;
+    padding: 0;
+  }
+
+  .partners__icons__item:nth-child(5) {
+    grid-column: auto;
+  }
 }

@@ -11,7 +11,7 @@ export default function Partners() {
           </Col>
         </Row>
         <Row>
-          <Col xl={{ span: 8, offset: 2 }} className="partners__icons__top">
+          <Col lg={{ span: 8, offset: 2 }} className="partners__icons">
             <div className="partners__icons__item">
               <a href="/">
                 <img src="img/partners1.png" alt="partners1" />
