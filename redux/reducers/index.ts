@@ -1,7 +1,7 @@
 import { combineReducers, AnyAction } from 'redux';
 import { HYDRATE } from 'next-redux-wrapper';
-import { firstReducer } from './firstReducer';
-import { secondReducer } from './secondReducer';
+import firstReducer from './firstReducer';
+import secondReducer from './secondReducer';
 import { IRootState } from '../types';
 
 const rootReducer = combineReducers({

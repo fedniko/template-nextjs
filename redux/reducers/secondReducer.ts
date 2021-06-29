@@ -6,7 +6,7 @@ const initialState: ISecondReducer[] = [
   { id: 2, name: 'second' },
 ];
 
-export const secondReducer = (state = initialState, action: AnyAction) => {
+const secondReducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
     case 'ADD_ITEM':
       return [...state, { id: 3, name: 'third' }];
@@ -14,3 +14,5 @@ export const secondReducer = (state = initialState, action: AnyAction) => {
       return state;
   }
 };
+
+export default secondReducer;

@@ -7,6 +7,8 @@ import { IRootState } from './types';
 // eslint-disable-next-line
 const makeStore: MakeStore<IRootState | any> = process.env.NODE_ENV !== 'production' ? (context: Context) => createStore(reducer, devToolsEnhancer({})) : (context: Context) => createStore(reducer)
 
-export const wrapper = createWrapper<IRootState | any>(makeStore, {
+const wrapper = createWrapper<IRootState | any>(makeStore, {
   debug: true,
 });
+
+export default wrapper;

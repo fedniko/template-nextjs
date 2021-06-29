@@ -5,7 +5,7 @@ const initialState: IFirstReducer = {
   counter: 0,
 };
 
-export const firstReducer = (state = initialState, action: AnyAction) => {
+const firstReducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
     case 'INCREMENT':
       return { ...state, counter: state.counter + 1 };
@@ -15,3 +15,5 @@ export const firstReducer = (state = initialState, action: AnyAction) => {
       return state;
   }
 };
+
+export default firstReducer;
