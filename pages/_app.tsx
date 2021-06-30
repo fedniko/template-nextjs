@@ -13,8 +13,13 @@ import '../templates/inform/contactUs/contactUs.scss';
 import '../templates/inform/news/news.scss';
 
 import type { AppProps } from 'next/app';
+import wrapper from '../redux/store';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Component {...pageProps} />
+  );
 }
-export default MyApp;
+
+export default wrapper.withRedux(MyApp);
