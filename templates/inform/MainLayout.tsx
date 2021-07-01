@@ -20,7 +20,7 @@ export default function MainLayout({ children }: { children: any }) {
             </Col>
             <Col xl="4" lg="5" md="6" sm="8" xs="8" className="header__links">
               <Link href="/">
-                <a className="text">Lorem ipsum dolor</a>
+                <a className="text">Lorem ipsum</a>
               </Link>
               <Link href="/">
                 <a className="text">Lorem ipsum dolor sit amet</a>
