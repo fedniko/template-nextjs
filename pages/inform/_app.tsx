@@ -1,4 +1,4 @@
-import '../../styles/globals.scss';
+import '../../styles/inform_styles/globals.scss';
 import '../../templates/inform/header.scss';
 import '../../templates/inform/footer.scss';
 import 'slick-carousel/slick/slick.css';

@@ -1,11 +1,11 @@
 @import 'variables';
-@import '~bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 @font-face {
   font-family: 'Golos';
   src:
-          url('../public/fonts/Golos-Text_Regular.woff2') format('woff2'),
-          url('../public/fonts/Golos-Text_Regular.woff') format('woff');
+          url('../../public/fonts/Golos-Text_Regular.woff2') format('woff2'),
+          url('../../public/fonts/Golos-Text_Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -13,8 +13,8 @@
 @font-face {
   font-family: 'Golos';
   src:
-          url('../public/fonts/Golos-Text_Bold.woff2') format('woff2'),
-          url('../public/fonts/Golos-Text_Bold.woff') format('woff');
+          url('../../public/fonts/Golos-Text_Bold.woff2') format('woff2'),
+          url('../../public/fonts/Golos-Text_Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -22,8 +22,8 @@
 @font-face {
   font-family: 'Golos';
   src:
-          url('../public/fonts/Golos-Text_Medium.woff2') format('woff2'),
-          url('../public/fonts/Golos-Text_Medium.woff') format('woff');
+          url('../../public/fonts/Golos-Text_Medium.woff2') format('woff2'),
+          url('../../public/fonts/Golos-Text_Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
