@@ -1,12 +1,17 @@
 @import '../../styles/commerce_styles/globals';
 
 .header {
-  //position: absolute;
-  //top: 0;
-  //left: 0;
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin-top: 27px;
+  padding-top: 25px;
   margin-bottom: 27px;
+}
+
+.header_size {
+  margin-top: 260px;
 }
 
 .header__text {
@@ -20,7 +25,7 @@
 .header__top {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .header__icon {

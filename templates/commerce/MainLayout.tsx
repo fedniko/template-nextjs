@@ -10,13 +10,28 @@ import {
   Button,
   NavDropdown,
 } from 'react-bootstrap';
+import { useEffect } from 'react';
 
 export default function MainLayout({ children }: { children: any }) {
+  useEffect(() => {
+    window.onscroll = () => {
+      const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      const headerTop = document.getElementById('headerTop');
+
+      if (headerTop != null) {
+        if (scrolled > 150) {
+          headerTop.style.display = 'none';
+        } else {
+          headerTop.style.display = 'flex';
+        }
+      }
+    };
+  });
   return (
     <>
       <header className="header">
         <Container>
-          <Row className="header__top">
+          <Row className="header__top" id="headerTop">
             <Col
               xs="12"
               sm="9"
@@ -161,6 +176,7 @@ export default function MainLayout({ children }: { children: any }) {
           </Navbar>
         </Container>
       </header>
+      <div className="header_size" />
       <main>{children}</main>
       <footer className="footer">
         <Container className="footer__container">
