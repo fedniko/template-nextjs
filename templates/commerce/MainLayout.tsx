@@ -8,6 +8,7 @@ import {
   FormControl,
   Form,
   Button,
+  NavDropdown,
 } from 'react-bootstrap';
 
 export default function MainLayout({ children }: { children: any }) {
@@ -15,8 +16,67 @@ export default function MainLayout({ children }: { children: any }) {
     <>
       <header className="header">
         <Container>
+          <Row className="header__top">
+            <Col
+              xs="12"
+              sm="9"
+              md="10"
+              lg="8"
+              xl="6"
+              className="header__top__links"
+            >
+              <Link href="/">
+                <a className="text header__text">
+                  <img
+                    className="header__icon"
+                    src="/commerce_img/plane.svg"
+                    alt="hearth"
+                  />
+                  Free delivery over $200
+                </a>
+              </Link>
+              <Link href="/">
+                <a className="text header__text">
+                  <img
+                    className="header__icon"
+                    src="/commerce_img/coin.svg"
+                    alt="cart"
+                  />
+                  Money back guarantee
+                </a>
+              </Link>
+              <Link href="/">
+                <a className="text header__text">
+                  <img
+                    className="header__icon"
+                    src="/commerce_img/tag.svg"
+                    alt="signIn"
+                  />
+                  Weekly new arrivals
+                </a>
+              </Link>
+            </Col>
+            <Col
+              xs={{ span: 12, offset: 0 }}
+              sm={{ span: 2, offset: 1 }}
+              md={{ span: 2, offset: 0 }}
+              lg={{ span: 2, offset: 2 }}
+              xl={{ span: 2, offset: 4 }}
+              className="header__dropdown"
+            >
+              <NavDropdown title="ENG" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#!">RUS</NavDropdown.Item>
+                <NavDropdown.Item href="#!">YKT</NavDropdown.Item>
+              </NavDropdown>
+
+              <NavDropdown title="USD" id="basic-nav-dropdown2">
+                <NavDropdown.Item href="#action/3.1">EURO</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">RUB</NavDropdown.Item>
+              </NavDropdown>
+            </Col>
+          </Row>
           <Row>
-            <Col xl="2" lg="1" md="2" sm="3" xs="3" className="header__logo">
+            <Col xs="4" sm="6" md="4" className="header__logo">
               <Link href="/">
                 <a>
                   <img
@@ -28,11 +88,9 @@ export default function MainLayout({ children }: { children: any }) {
               </Link>
             </Col>
             <Col
-              xl={{ span: 4, offset: 2 }}
-              lg="5"
-              md="6"
-              sm="8"
               xs="8"
+              sm={{ span: 6, offset: 0 }}
+              md="4"
               className="header__search"
             >
               <Form className="d-flex">
@@ -46,56 +104,60 @@ export default function MainLayout({ children }: { children: any }) {
               </Form>
             </Col>
             <Col
-              xl={{ span: 2, offset: 2 }}
-              lg={{ span: 1, offset: 5 }}
-              md={{ span: 1, offset: 3 }}
-              sm={{ span: 1, offset: 0 }}
-              xs={{ span: 1, offset: 0 }}
+              xs="12"
+              sm={{ span: 6, offset: 6 }}
+              md={{ span: 4, offset: 0 }}
+              lg={{ span: 3, offset: 1 }}
               className="header__links"
             >
               <Link href="/">
                 <a className="text header__text">
+                  <img src="/commerce_img/hearth.svg" alt="hearth" />
+                </a>
+              </Link>
+              <Link href="/">
+                <a className="text header__text">
+                  <img src="/commerce_img/cart.svg" alt="cart" />
+                </a>
+              </Link>
+              <Link href="/">
+                <a className="text header__text">
                   <img
-                    className="header__user__img"
-                    src="/inform_img/search.svg"
-                    alt="user"
-                    width="20px"
-                    height="20px"
+                    className="header__icon"
+                    src="/commerce_img/signin.svg"
+                    alt="signIn"
                   />
+                  Sign in
                 </a>
               </Link>
             </Col>
           </Row>
         </Container>
-        <div className="header__top" />
+        <div className="header__border" />
         <Container>
           <Navbar expand="md">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
                 <Link href="/">
-                  <a className="nav-link text">Lorem ipsum</a>
+                  <a className="nav-link active text">Home</a>
                 </Link>
                 <Link href="/">
-                  <a className="nav-link text">Lorem ipsum</a>
+                  <a className="nav-link text">Shop</a>
                 </Link>
                 <Link href="/">
-                  <a className="nav-link text">Lorem ipsum</a>
+                  <a className="nav-link text">Blog</a>
                 </Link>
                 <Link href="/">
-                  <a className="nav-link text">Lorem ipsum</a>
-                </Link>
-                <Link href="/">
-                  <a className="nav-link text">Lorem</a>
-                </Link>
-                <Link href="/">
-                  <a className="nav-link text">Lorem ipsum</a>
-                </Link>
-                <Link href="/">
-                  <a className="nav-link text">Lorem</a>
+                  <a className="nav-link text">About us</a>
                 </Link>
               </Nav>
             </Navbar.Collapse>
+            <Navbar.Text>
+              <p className="text header__navbar_text">
+                Extra 20% off save items + Free shipping for orders over $200
+              </p>
+            </Navbar.Text>
           </Navbar>
         </Container>
       </header>

@@ -38,6 +38,11 @@ $green:   #198754;
 $teal:    #20c997;
 $cyan:    #0dcaf0;
 
+//Project colors
+$neutral_darkest: #1D1F1F;
+$neutral_darker: #5D5F5F;
+$secondary_darkest: #DE5212;
+
 $primary:       $blue;
 $secondary:     $gray-600;
 $success:       $green;
@@ -47,9 +52,9 @@ $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-900;
 
-$navbar-light-color:                #000000 !default;
-$navbar-light-hover-color:          #007BFF !default;
-$navbar-light-active-color:         #007BFF !default;
+$navbar-light-color:                $neutral_darker !default;
+$navbar-light-hover-color:          $secondary_darkest !default;
+$navbar-light-active-color:         $neutral_darker !default;
 $navbar-light-disabled-color:       rgba($black, .3) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
