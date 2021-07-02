@@ -9,6 +9,7 @@ import {
   Form,
   Button,
   NavDropdown,
+  InputGroup,
 } from 'react-bootstrap';
 import { useEffect } from 'react';
 
@@ -32,14 +33,7 @@ export default function MainLayout({ children }: { children: any }) {
       <header className="header">
         <Container>
           <Row className="header__top" id="headerTop">
-            <Col
-              xs="12"
-              sm="9"
-              md="10"
-              lg="8"
-              xl="6"
-              className="header__top__links"
-            >
+            <Col xs="12" sm="9" md="10" lg="8" className="header__top__links">
               <Link href="/">
                 <a className="text header__text">
                   <img
@@ -76,7 +70,6 @@ export default function MainLayout({ children }: { children: any }) {
               sm={{ span: 2, offset: 1 }}
               md={{ span: 2, offset: 0 }}
               lg={{ span: 2, offset: 2 }}
-              xl={{ span: 2, offset: 4 }}
               className="header__dropdown"
             >
               <NavDropdown title="ENG" id="basic-nav-dropdown">
@@ -179,149 +172,164 @@ export default function MainLayout({ children }: { children: any }) {
       <div className="header_size" />
       <main>{children}</main>
       <footer className="footer">
-        <Container className="footer__container">
-          <Row className="footer__top">
-            <Col xl="8" lg="8" md="8" sm="12" xs="12">
-              <Row className="footer__top__header">
-                <Col>
-                  <p className="text footer__text">Lorem</p>
-                </Col>
-              </Row>
-              <Row className="footer__top__links">
-                <Col>
-                  <div className="footer__links">
-                    <Link href="/">
-                      <a className="text footer__text">Lorem ipsum</a>
-                    </Link>
-                    <Link href="/">
-                      <a className="text footer__text">Lorem</a>
-                    </Link>
-                    <Link href="/">
-                      <a className="text footer__text">Lorem ipsum</a>
-                    </Link>
-                    <Link href="/">
-                      <a className="text footer__text">Lorem ipsum</a>
-                    </Link>
-                    <Link href="/">
-                      <a className="text footer__text">Lorem ipsum</a>
-                    </Link>
-                    <Link href="/">
-                      <a className="text footer__text">Lorem ipsum</a>
-                    </Link>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-            <Col xl="4" lg="4" md="4" sm="12" xs="12">
-              <Row className="footer__phone">
-                <Col>
-                  <a
-                    className="text footer__text footer__phone_text"
-                    href="tel:+79999999999"
-                  >
-                    +7 999 999-99-99
-                  </a>
-                </Col>
-              </Row>
-              <Row className="footer__phone__bottom_text">
-                <Col>
-                  <p className="text footer__text">Lorem ipsum dolor sit</p>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Container>
         <div className="footer__middle">
           <Container className="footer__middle__container">
             <Row>
-              <Col
-                xl="7"
-                lg="8"
-                md="9"
-                sm="12"
-                xs="12"
-                className="footer__middle__links"
-              >
-                <div className="footer__middle__links__item">
-                  <h2 className="text footer__text">Lorem ipsum dolor</h2>
+              <Col md="4" className="footer__logo">
+                <Link href="/">
+                  <a>
+                    <img
+                      className="footer__logo_img"
+                      src="/commerce_img/logo.svg"
+                      alt="logo"
+                    />
+                  </a>
+                </Link>
+                <p className="text footer__text footer__logo__text">
+                  Address: 17 Princess Road, London, Greater London NW1 8JR, UK
+                </p>
+                <p className="text footer__text footer__logo__text">
+                  Phone: (800) 8001-8588, (0600) 874 548
+                </p>
+                <p className="text footer__text footer__logo__text">
+                  Email: info@gmail.com
+                </p>
+                <div className="footer__icons">
                   <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
+                    <a>
+                      <img
+                        className="footer__logo_img"
+                        src="/commerce_img/ic-facebook.svg"
+                        alt="logo"
+                      />
+                    </a>
                   </Link>
                   <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
+                    <a>
+                      <img
+                        className="footer__logo_img"
+                        src="/commerce_img/ic-google.svg"
+                        alt="logo"
+                      />
+                    </a>
                   </Link>
                   <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
+                    <a>
+                      <img
+                        className="footer__logo_img"
+                        src="/commerce_img/ic-instagram.svg"
+                        alt="logo"
+                      />
+                    </a>
                   </Link>
                   <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                </div>
-                <div className="footer__middle__links__item">
-                  <h2 className="text footer__text">Lorem ipsum dolor</h2>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                </div>
-                <div className="footer__middle__links__item">
-                  <h2 className="text footer__text">Lorem</h2>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text footer__text">Lorem ipsum</a>
+                    <a>
+                      <img
+                        className="footer__logo_img"
+                        src="/commerce_img/ic-twitter.svg"
+                        alt="logo"
+                      />
+                    </a>
                   </Link>
                 </div>
               </Col>
-              <Col
-                xl={{ span: 4, offset: 1 }}
-                lg={{ span: 4, offset: 0 }}
-                md={{ span: 3, offset: 0 }}
-                sm="12"
-                xs="12"
-              >
-                <p className="text footer__text footer__middle__last">
-                  Lorem ipsum dolor sit amet
-                  <br /> Lorem ipsum
-                  <br /> Lorem ipsum
-                  <br /> Lorem ipsum dolor sit amet, consectetur
-                  <br /> Тел.: 8(800)000-00-00
-                  <br /> Email: example@mail.ru
-                  <br /> Адрес: г. Москва, ул. Большая, 1
+              <Col md={{ span: 2, offset: 1 }}>
+                <h2 className="text footer__heading">Company</h2>
+                <div className="footer__middle__links">
+                  <div className="footer__middle__links__item">
+                    <Link href="/">
+                      <a className="text footer__text">About us</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Shop</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Features</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Sale</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Contact</a>
+                    </Link>
+                  </div>
+                  <div className="footer__middle__links__item">
+                    <Link href="/">
+                      <a className="text footer__text">Shipping</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Help</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">Privacy Policy</a>
+                    </Link>
+                    <Link href="/">
+                      <a className="text footer__text">FAQs</a>
+                    </Link>
+                  </div>
+                </div>
+              </Col>
+              <Col md={{ span: 4, offset: 1 }} className="footer__middle__last">
+                <h2 className="text footer__heading">Newsletter</h2>
+                <p className="text footer__text footer__logo__text">
+                  Sign up for our Newsletter to get more events, promotions &
+                  news from us!
                 </p>
+                <InputGroup className="mb-3 footer__input">
+                  <FormControl
+                    placeholder="Enter your email"
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon2"
+                  />
+                  <Button variant="outline-secondary" id="button-addon2">
+                    Button
+                  </Button>
+                </InputGroup>
               </Col>
             </Row>
           </Container>
           <Container className="footer__bottom__container">
             <Row>
-              <Col>
+              <Col xs="6">
                 <p className="text footer__text">
-                  © 2016-2021 АЭБ АйТи. Все права защищены.
+                  Copyright © All rights Reserved
                 </p>
+              </Col>
+              <Col
+                xs="6"
+                md={{ span: 4, offset: 2 }}
+                lg={{ span: 3, offset: 3 }}
+                xl={{ span: 2, offset: 4 }}
+              >
+                <div className="footer__bottom__icons">
+                  <Link href="/">
+                    <a>
+                      <img
+                        className=""
+                        src="/commerce_img/Visa.png"
+                        alt="logo"
+                      />
+                    </a>
+                  </Link>
+                  <Link href="/">
+                    <a>
+                      <img
+                        className=""
+                        src="/commerce_img/MasterCard.png"
+                        alt="logo"
+                      />
+                    </a>
+                  </Link>
+                  <Link href="/">
+                    <a>
+                      <img
+                        className=""
+                        src="/commerce_img/PayPal.png"
+                        alt="logo"
+                      />
+                    </a>
+                  </Link>
+                </div>
               </Col>
             </Row>
           </Container>

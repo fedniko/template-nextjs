@@ -11,7 +11,7 @@
 }
 
 .header_size {
-  margin-top: 260px;
+  margin-top: 257px;
 }
 
 .header__text {
@@ -116,4 +116,16 @@
   font-size: 14px;
   line-height: 20px;
   color: $neutral_darker;
+}
+
+@media (max-width: 991px) {
+  .header_size {
+    margin-top: 293px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header_size {
+    margin-top: 357px;
+  }
 }
