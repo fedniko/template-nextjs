@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import MainLayout from '../templates/commerce/MainLayout';
+import ItemList from '../templates/commerce/itemList/ItemList';
 
 export default function Home() {
   return (
@@ -8,7 +9,9 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main />
+      <main>
+        <ItemList />
+      </main>
     </MainLayout>
   );
 }
