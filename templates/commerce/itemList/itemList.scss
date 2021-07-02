@@ -29,6 +29,19 @@
   //padding-top: 30px;
 }
 
+.itemList__colors {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 18px;
+}
+
+.itemList__colors button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+}
+
 .itemList__heading {
   font-style: normal;
   font-weight: 300;

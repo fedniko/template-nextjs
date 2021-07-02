@@ -8,50 +8,59 @@ export default function ItemList() {
       name: 'Bucklo Wrop Wooden Table',
       price: 69.36,
       picture: '/commerce_img/item1.png',
+      colors: ['#0F1214', '#F5222D', '#FAAD14', '#71767C', '#52C41A'],
     },
     {
       id: 2,
       name: 'Bucklo Wrop Wooden Table',
       price: 69.36,
       picture: '/commerce_img/item2.png',
+      colors: ['#0F1214', '#F5222D', '#FAAD14', '#71767C', '#52C41A'],
     },
     {
       id: 3,
       name: 'Bucklo Wrop Wooden Table',
       price: 56.12,
       picture: '/commerce_img/item3.png',
+      colors: ['#0F1214', '#F5222D', '#FAAD14', '#71767C', '#52C41A'],
     },
     {
       id: 4,
       name: 'Bucklo Wrop Wooden Table',
       price: 69.36,
       picture: '/commerce_img/item4.png',
+      colors: ['#0F1214', '#F5222D', '#FAAD14', '#71767C', '#52C41A'],
     },
     {
       id: 5,
       name: 'Bucklo Wrop Wooden Table',
       price: 56.12,
       picture: '/commerce_img/item5.png',
+      colors: ['#0F1214', '#F5222D', '#FAAD14', '#71767C', '#52C41A'],
     },
     {
       id: 6,
       name: 'Bucklo Wrop Wooden Table',
       price: 69.36,
       picture: '/commerce_img/item6.png',
+      colors: ['#0F1214', '#F5222D', '#FAAD14', '#71767C', '#52C41A'],
     },
     {
       id: 7,
       name: 'Bucklo Wrop Wooden Table',
       price: 69.36,
       picture: '/commerce_img/item7.png',
+      colors: ['#0F1214', '#F5222D', '#FAAD14', '#71767C', '#52C41A'],
     },
     {
       id: 8,
       name: 'Bucklo Wrop Wooden Table',
       price: 56.12,
       picture: '/commerce_img/item8.png',
+      colors: ['#0F1214', '#F5222D', '#FAAD14', '#71767C', '#52C41A'],
     },
   ]);
+
   return (
     <section className="itemList">
       <Container>
@@ -72,6 +81,15 @@ export default function ItemList() {
                   />
                 </div>
                 <div className="itemList__body">
+                  <div className="itemList__colors">
+                    {p.colors.map((color) => (
+                      <button
+                        type="button"
+                        style={{ background: color }}
+                        key={color}
+                      />
+                    ))}
+                  </div>
                   <h2 className="itemList__heading">{p.name}</h2>
                   <p className="text itemList__price">${p.price}</p>
                 </div>
