@@ -180,7 +180,7 @@ export default function MainLayout({ children }: { children: any }) {
                   <a>
                     <img
                       className="footer__logo_img"
-                      src="/commerce_img/logo.svg"
+                      src="/commerce_img/logo_light.svg"
                       alt="logo"
                     />
                   </a>
@@ -233,7 +233,7 @@ export default function MainLayout({ children }: { children: any }) {
                   </Link>
                 </div>
               </Col>
-              <Col md={{ span: 2, offset: 1 }}>
+              <Col md={{ span: 3, offset: 0 }} className="footer__middle_mid">
                 <h2 className="text footer__heading">Company</h2>
                 <div className="footer__middle__links">
                   <div className="footer__middle__links__item">
