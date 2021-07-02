@@ -20,7 +20,7 @@ export default function MainLayout({ children }: { children: any }) {
       const headerTop = document.getElementById('headerTop');
 
       if (headerTop != null) {
-        if (scrolled > 150) {
+        if (scrolled > 50) {
           headerTop.style.display = 'none';
         } else {
           headerTop.style.display = 'flex';
