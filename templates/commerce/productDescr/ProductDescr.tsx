@@ -1,28 +1,40 @@
+import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 export default function ProductDescr() {
+  const [previews, setPreviews] = useState({
+    images: [
+      'commerce_img/products/product-img1.png',
+      'commerce_img/products/product-img2.png',
+      'commerce_img/products/product-img3.png',
+    ],
+    isSelect: 0,
+  });
+
   return (
     <section className="productDescr">
       <Container>
         <Row className="align-items-center">
           <Col md="4" xs="12" className="productDescr__imgBlock d-flex">
             <div className="productDescr__imgBlock__left">
-              <img
-                src="commerce_img/products/product-img1.png"
-                alt="product-img1"
-              />
-              <img
-                src="commerce_img/products/product-img2.png"
-                alt="product-img2"
-              />
-              <img
-                src="commerce_img/products/product-img3.png"
-                alt="product-img3"
-              />
+              {previews.images.map((src, index) => (
+                // eslint-disable-next-line
+                <img
+                  src={src}
+                  alt="product-img"
+                  className={previews.isSelect === index ? 'selected' : ''}
+                  onClick={() =>
+                    setPreviews({
+                      ...previews,
+                      isSelect: index,
+                    })
+                  }
+                />
+              ))}
             </div>
             <div className="productDescr__imgBlock__right">
               <img
-                src="commerce_img/products/product-img1.png"
+                src={previews.images[previews.isSelect]}
                 alt="product-img1"
               />
             </div>
