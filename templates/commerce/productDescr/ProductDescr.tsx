@@ -20,6 +20,7 @@ export default function ProductDescr() {
               {previews.images.map((src, index) => (
                 // eslint-disable-next-line
                 <img
+                  key={src}
                   src={src}
                   alt="product-img"
                   className={previews.isSelect === index ? 'selected' : ''}

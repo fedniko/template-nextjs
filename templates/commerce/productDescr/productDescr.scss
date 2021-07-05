@@ -10,8 +10,13 @@
         border: 1px solid #DE5212;
         border-radius: 4px;
       }
+      img:not(:last-child) {
+        margin-bottom: 20px;
+      }
     }
     &__right {
+      display: flex;
+      align-items: center;
       width: 100%;
       img {
         width: 100%;
