@@ -1,0 +1,186 @@
+.productReview {
+  &__tabsBlock {
+    padding-right: 0;
+    border-right: 2px solid #F4F4F5;
+    &__tab {
+      width: 100%;
+      font-size: 16px;
+      padding-right: 0;
+    }
+    &__tab.active {
+      color: #DE5212;
+      font-weight: bold;
+      box-sizing: content-box;
+      border-right: 2px solid #DE5212;
+    }
+    &__tab:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  &__reviewBlock {
+    padding-left: 90px;
+    margin-bottom: 80px;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      &__title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      &__rating {
+        p {
+          color: #5D5F5F;
+          font-size: 14px;
+        }
+      }
+    }
+    &__main {
+      margin-top: 30px;
+      display: flex;
+      &__reviews {
+        &__select {
+          margin-bottom: 30px;
+          &__input {
+            display: flex;
+            align-items: center;
+            .form-label {
+              font-weight: bold;
+              font-size: 16px;
+              margin-right: 23px;
+            }
+            .form-control {
+              height: 48px;
+              width: 210px;
+            }
+          }
+        }
+        &__pagination {
+          display: flex;
+          justify-content: center;
+          height: 32px;
+          margin-top: 40px;
+          li {
+            font-size: 12px;
+            height: 32px;
+            width: 33px;
+            span, a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #5D5F5F;
+              font-weight: bold;
+              border: 1px solid transparent;
+              border-radius: 4px;
+            }
+          }
+          li.active {
+            span {
+              background-color: #5D5F5F !important;
+              border: 1px solid #5D5F5F !important;
+            }
+          }
+          li:first-child, li:last-child {
+            width: 51px;
+            a {
+              border: 1px solid #5D5F5F;
+            }
+          }
+          li:not(:last-child) {
+            margin-right: 5px;
+          }
+        }
+      }
+      &__reviewForm {
+        margin-left: 90px;
+        background: #F4F4F5;
+        border-radius: 4px;
+        padding: 30px 40px;
+        &__title {
+          display: flex;
+          justify-content: center;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        &__rating {
+          #formRating {
+            line-height: normal;
+          }
+        }
+        &__review {
+          margin-bottom: 60px;
+          .form-control {
+            height: 163px !important;
+            border-radius: 4px !important;
+            resize: none;
+          }
+        }
+        &__submit {
+          display: flex;
+          justify-content: center;
+          button {
+            height: 48px;
+            width: 210px;
+            background: #1D1F1F;
+            border-radius: 40px;
+            color: white;
+            border: 0;
+          }
+          button:hover {
+            background: #1D1F1F;
+          }
+        }
+        &__title, &__name, &__email, &__rating {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+.reviewCard {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    &__customer {
+      display: flex;
+      &__info {
+        margin-left: 12px;
+        &__name {
+          font-weight: bold;
+        }
+        &__date {
+          font-size: 12px;
+          color: #B6B8B8;
+        }
+      }
+    }
+  }
+  &__middle {
+    color: #5D5F5F;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  &__bottom {
+    display: flex;
+    P {
+      font-size: 14px;
+    }
+    p:not(:last-child) {
+      margin-right: 23px;
+    }
+  }
+}
+
+.reviewForm {
+  .form-control {
+    border-radius: 40px;
+    height: 48px;
+    padding: 14px 24px;
+  }
+  .text-muted {
+    padding-left: 24px;
+  }
+}
