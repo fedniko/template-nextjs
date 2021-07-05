@@ -8,7 +8,7 @@ import { IRootState } from './types';
 const makeStore: MakeStore<IRootState | any> = process.env.NODE_ENV !== 'production' ? (context: Context) => createStore(reducer, devToolsEnhancer({})) : (context: Context) => createStore(reducer)
 
 const wrapper = createWrapper<IRootState | any>(makeStore, {
-  debug: true,
+  // debug: true,
 });
 
 export default wrapper;

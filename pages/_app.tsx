@@ -7,6 +7,8 @@ import '../templates/commerce/itemList/mainCarousel.scss';
 import '../templates/commerce/itemList/itemList.scss';
 import '../templates/commerce/itemList/itemCarousel.scss';
 import '../templates/commerce/itemList/popularCategories.scss';
+import '../templates/commerce/productDescr/productDescr.scss';
+import '../templates/commerce/productReview/productReview.scss';
 
 import type { AppProps } from 'next/app';
 import wrapper from '../redux/store';
