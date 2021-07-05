@@ -1,7 +1,9 @@
 import { Col, Container, Row, Button } from 'react-bootstrap';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 export default function ItemList() {
+  const router = useRouter();
   const [products] = useState([
     {
       id: 1,
@@ -72,7 +74,10 @@ export default function ItemList() {
         <Row>
           {products.map((p) => (
             <Col xs="6" md="4" xl="3" key={p.id * 13}>
-              <div className="itemList__item">
+              <div
+                className="itemList__item"
+                onClick={() => router.push('/product-page')}
+              >
                 <div className="itemList__image">
                   <img
                     className="itemList__image_item"
