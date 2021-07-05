@@ -7,6 +7,7 @@ import '../templates/commerce/itemList/mainCarousel.scss';
 import '../templates/commerce/itemList/itemList.scss';
 import '../templates/commerce/itemList/itemCarousel.scss';
 import '../templates/commerce/itemList/popularCategories.scss';
+import '../templates/commerce/itemList/partners.scss';
 import '../templates/commerce/productDescr/productDescr.scss';
 import '../templates/commerce/productReview/productReview.scss';
 

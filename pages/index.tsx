@@ -4,6 +4,7 @@ import ItemList from '../templates/commerce/itemList/ItemList';
 import MainCarousel from '../templates/commerce/itemList/MainCarousel';
 import ItemCarousel from '../templates/commerce/itemList/ItemCarousel';
 import PopularCategories from '../templates/commerce/itemList/PopularCategories';
+import Partners from '../templates/commerce/itemList/Partners';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <ItemList />
         <ItemCarousel />
         <PopularCategories />
+        <Partners />
       </main>
     </MainLayout>
   );
