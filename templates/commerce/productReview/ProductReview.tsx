@@ -1,4 +1,4 @@
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Pagination } from 'react-bootstrap';
 
 const reviews = [
   {
@@ -115,27 +115,15 @@ export default function ProductReview() {
                 {reviews.map((review, index) => (
                   <ReviewCard review={review} key={review.name} index={index} />
                 ))}
-                <div className="productReview__reviewBlock__main__reviews__pagination">
-                  <button
-                    className="productReview__reviewBlock__main__reviews__pagination__prev"
-                    type="button"
-                  >
-                    Pre
-                  </button>
-                  <ul className="productReview__reviewBlock__main__reviews__pagination__pages">
-                    <li>1</li>
-                    <li className="active">2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                  </ul>
-                  <button
-                    className="productReview__reviewBlock__main__reviews__pagination__next"
-                    type="button"
-                  >
-                    Next
-                  </button>
-                </div>
+                <Pagination className="productReview__reviewBlock__main__reviews__pagination">
+                  <Pagination.Prev>Pre</Pagination.Prev>
+                  <Pagination.Item active>{1}</Pagination.Item>
+                  <Pagination.Item>{2}</Pagination.Item>
+                  <Pagination.Item>{3}</Pagination.Item>
+                  <Pagination.Item>{4}</Pagination.Item>
+                  <Pagination.Item>{5}</Pagination.Item>
+                  <Pagination.Next>Next</Pagination.Next>
+                </Pagination>
               </Col>
               <Col
                 md="6"
