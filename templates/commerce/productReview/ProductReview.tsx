@@ -113,7 +113,7 @@ export default function ProductReview() {
                   </Form.Group>
                 </div>
                 {reviews.map((review, index) => (
-                  <ReviewCard review={review} index={index} />
+                  <ReviewCard review={review} key={review.name} index={index} />
                 ))}
                 <div className="productReview__reviewBlock__main__reviews__pagination">
                   <button
@@ -173,8 +173,8 @@ export default function ProductReview() {
                   controlId="formRating"
                 >
                   <Form.Label>Rating</Form.Label>
-                  <Form.Control as="select">
-                    <option selected disabled>
+                  <Form.Control as="select" defaultValue="DEFAULT">
+                    <option value="DEFAULT" disabled>
                       Choose rating
                     </option>
                     <option>1 star</option>
