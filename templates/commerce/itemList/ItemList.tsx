@@ -71,7 +71,7 @@ export default function ItemList() {
         </Row>
         <Row>
           {products.map((p) => (
-            <Col xs="6" md="4" xl="3" key={p.id}>
+            <Col xs="6" md="4" xl="3" key={p.id * 13}>
               <div className="itemList__item">
                 <div className="itemList__image">
                   <img

@@ -1,6 +1,7 @@
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import Slider from 'react-slick';
-import { useState } from 'react';
+// eslint-disable-next-line no-use-before-define
+import React, { useState } from 'react';
 
 export default function MainCarousel() {
   const [products] = useState([
@@ -73,8 +74,8 @@ export default function MainCarousel() {
   return (
     <section className="main__carousel">
       <Slider {...settings}>
-        {products.map((p) => (
-          <>
+        {products.map((product) => (
+          <React.Fragment key={product.id}>
             <Container className="main__carousel__container">
               <Row className="align-items-center">
                 <Col
@@ -86,7 +87,7 @@ export default function MainCarousel() {
                   <h2 className="main__carousel__heading">
                     AWESOME FURNITURES
                   </h2>
-                  <p className="text main__carousel__text">{p.name}</p>
+                  <p className="text main__carousel__text">{product.name}</p>
                   <Button
                     variant="outline-primary"
                     size="lg"
@@ -103,13 +104,13 @@ export default function MainCarousel() {
                 >
                   <img
                     className="main__carousel__img"
-                    src={p.picture}
+                    src={product.picture}
                     alt="carousel_pic"
                   />
                 </Col>
               </Row>
             </Container>
-          </>
+          </React.Fragment>
         ))}
       </Slider>
     </section>

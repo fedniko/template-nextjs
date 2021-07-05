@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../templates/commerce/itemList/mainCarousel.scss';
 import '../templates/commerce/itemList/itemList.scss';
+import '../templates/commerce/itemList/itemCarousel.scss';
 
 import type { AppProps } from 'next/app';
 import wrapper from '../redux/store';
