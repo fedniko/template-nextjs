@@ -15,6 +15,12 @@ $container-max-widths: (
 //        xxl: 1400px
 //);
 
+//Project colors
+$neutral_darkest: #1D1F1F;
+$neutral_darker: #5D5F5F;
+$secondary_darkest: #DE5212;
+$secondary_lightest: #FBF8F5;
+
 $white:    #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
@@ -32,13 +38,14 @@ $indigo:  #6610f2;
 $purple:  #6f42c1;
 $pink:    #d63384;
 $red:     #dc3545;
-$orange:  #fd7e14;
+//$orange:  #fd7e14;
+$orange:  $secondary_darkest;
 $yellow:  #ffc107;
 $green:   #198754;
 $teal:    #20c997;
 $cyan:    #0dcaf0;
 
-$primary:       $blue;
+$primary:       $orange;
 $secondary:     $gray-600;
 $success:       $green;
 $info:          $cyan;
@@ -47,9 +54,9 @@ $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-900;
 
-$navbar-light-color:                #000000 !default;
-$navbar-light-hover-color:          #007BFF !default;
-$navbar-light-active-color:         #007BFF !default;
+$navbar-light-color:                $neutral_darker !default;
+$navbar-light-hover-color:          $secondary_darkest !default;
+$navbar-light-active-color:         $neutral_darker !default;
 $navbar-light-disabled-color:       rgba($black, .3) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;

@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import MainLayout from '../templates/commerce/MainLayout';
-import ProductDescr from '../templates/commerce/productDescr/ProductDescr';
-import ProductReview from '../templates/commerce/productReview/ProductReview';
+import ItemList from '../templates/commerce/itemList/ItemList';
+import MainCarousel from '../templates/commerce/itemList/MainCarousel';
+import ItemCarousel from '../templates/commerce/itemList/ItemCarousel';
+import PopularCategories from '../templates/commerce/itemList/PopularCategories';
 
 export default function Home() {
   return (
@@ -11,8 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <ProductDescr />
-        <ProductReview />
+        <MainCarousel />
+        <ItemList />
+        <ItemCarousel />
+        <PopularCategories />
       </main>
     </MainLayout>
   );

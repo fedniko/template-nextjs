@@ -1,0 +1,74 @@
+.itemCarousel {
+  margin-bottom: 100px;
+  cursor: grab;
+}
+
+//Центрировать слайды
+.itemCarousel .slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+//Отступ между слайдами
+.itemCarousel .slick-list {
+  margin: 0 -12px;
+}
+
+.itemCarousel .slick-slide>div {
+  padding: 0 12px;
+}
+
+//Цвет стрелки
+.itemCarousel .slick-prev:before, .itemCarousel .slick-next:before {
+  color: #1D1F1F;
+  font-size: 50px;
+  //text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+//Скрывать стрелку когда она неактивна
+.itemCarousel .slick-prev.slick-disabled:before, .itemCarousel .slick-next.slick-disabled:before {
+  opacity: 0;
+  cursor: default;
+}
+
+//Стрелки поверх слайдов
+.itemCarousel .slick-prev, .itemCarousel .slick-next {
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+//Расположение точек (Absolute - по умолчанию)
+.itemCarousel .slick-dots {
+  bottom: -40px;
+}
+
+//Отступ между точками
+.itemCarousel .slick-dots li {
+  margin: 0 4px;
+}
+
+//Неактивные точки
+.itemCarousel .slick-dots li button:before {
+  font-size: 8px;
+  color: #CCCCCC;
+  opacity: 1;
+}
+
+//Неактивные точки
+.itemCarousel .slick-dots li.slick-active button:before {
+  font-size: 13px;
+  opacity: 1;
+  color: #007BFF;
+}
+
+//Последняя нажатая точка
+.itemCarousel .slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+//Фокус и ховер точки
+.itemCarousel .slick-dots li.slick-active button:focus:before, .itemCarousel .slick-dots li button:hover:before {
+  opacity: 1;
+  color: #007BFF;
+}

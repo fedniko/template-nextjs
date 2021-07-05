@@ -51,24 +51,27 @@ p, h1, h2, h5 {
 
 .text {
   font-style: normal;
-  font-weight: 500;
-  font-size: 11px;
-  line-height: 120%;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: $neutral_darker;
 }
 
 .heading {
   font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 130%;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 48px;
+  text-align: center;
 }
 
 .heading-div {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .button {
-  border: 1px solid #007BFF;
+  border: 1px solid $secondary_darkest;
   box-sizing: border-box;
   border-radius: 10px;
   font-style: normal;
@@ -77,8 +80,9 @@ p, h1, h2, h5 {
   line-height: 130%;
   width: 50%;
   padding: .8rem 1rem;
+  color: $secondary_darkest;
 }
 
 a:hover {
-  color: #007BFF;
+  color: $secondary_darkest;
 }
