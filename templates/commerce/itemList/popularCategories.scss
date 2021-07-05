@@ -1,0 +1,46 @@
+.popularCategories {
+  margin-bottom: 100px;
+}
+
+.popularCategories__body {
+  padding-top: 52px;
+  padding-bottom: 60px;
+  background-image: url(/commerce_img/popularCategories.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popularCategories__heading {
+  color: #FFFFFF;
+  margin-bottom: 64px;
+}
+
+.popularCategories__body__headings_item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.popularCategories__links {
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FBF8F5;
+  text-align: center;
+}
+
+.popularCategories__links a {
+  margin-bottom: 24px;
+}
+
+.popularCategories__links a:last-child {
+  margin-bottom: 0;
+}
