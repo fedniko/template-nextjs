@@ -342,6 +342,17 @@ export default function MainLayout({ children }: { children: any }) {
       </footer>
       <Modal show={show} onHide={handleClose} className="loginModal" centered>
         <Modal.Body>
+          <button
+            className="loginModal__close"
+            type="button"
+            onClick={() => handleClose()}
+          >
+            <img
+              src="/commerce_img/loginModal/ic-close.svg"
+              alt="close modal"
+            />
+          </button>
+
           <Row>
             <Col md="6" xs="12" className="loginModal__left">
               <img src="./commerce_img/loginModal/bg.png" alt="background" />

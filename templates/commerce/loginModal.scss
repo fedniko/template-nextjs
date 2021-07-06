@@ -3,6 +3,7 @@
     padding: 0px;
     overflow-y: hidden;
     .row {
+      position: relative;
       margin: 0;
       width: 100%;
     }
@@ -15,6 +16,19 @@
   }
   .modal-dialog {
     max-width: 930px;
+  }
+  &__close {
+    z-index: 10;
+    padding: 0;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    img {
+      height: 14px;
+      width: 14px;
+    }
   }
   &__left, &__right {
     padding: 0px;
