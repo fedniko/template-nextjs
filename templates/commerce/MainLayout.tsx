@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import {
   Col,
   Container,
@@ -14,6 +15,7 @@ import {
 import { useEffect } from 'react';
 
 export default function MainLayout({ children }: { children: any }) {
+  const router = useRouter();
   useEffect(() => {
     window.onscroll = () => {
       const scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -154,7 +156,12 @@ export default function MainLayout({ children }: { children: any }) {
                   <a className="nav-link text">Shop</a>
                 </Link>
                 <Link href="/">
-                  <a className="nav-link text">Blog</a>
+                  <a
+                    className="nav-link text"
+                    onClick={() => router.push('/blog')}
+                  >
+                    Blog
+                  </a>
                 </Link>
                 <Link href="/">
                   <a className="nav-link text">About us</a>
