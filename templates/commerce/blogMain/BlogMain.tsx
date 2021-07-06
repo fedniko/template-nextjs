@@ -79,15 +79,14 @@ const posts = [
     img: '/commerce_img/blog_posts/2/5.png',
   },
   {
-    title:
-      'Guide to Mattress Toppers & Mattress Pads: What&apos;s the Difference?',
+    title: "Guide to Mattress Toppers & Mattress Pads: What's the Difference?",
     author: 'Dorothy Bell',
     date: 'Nov 05, 2019',
     img: '/commerce_img/blog_posts/2/6.png',
   },
   {
     title:
-      'Can&apos;t Live Without: Parachute Moms Share Their Must-Have Baby Items',
+      "Can't Live Without: Parachute Moms Share Their Must-Have Baby Items",
     author: 'Dorothy Bell',
     date: 'Nov 05, 2019',
     img: '/commerce_img/blog_posts/2/7.png',
