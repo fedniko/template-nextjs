@@ -1,4 +1,4 @@
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Pagination } from 'react-bootstrap';
 
 const posts = [
   {
@@ -117,6 +117,15 @@ export default function BlogMain() {
           <div className="blogMain__post__descr">{post.description}</div>
         </Col>
       ))}
+      <Pagination>
+        <Pagination.Prev>Pre</Pagination.Prev>
+        <Pagination.Item active>{1}</Pagination.Item>
+        <Pagination.Item>{2}</Pagination.Item>
+        <Pagination.Item>{3}</Pagination.Item>
+        <Pagination.Item>{4}</Pagination.Item>
+        <Pagination.Item>{5}</Pagination.Item>
+        <Pagination.Next>Next</Pagination.Next>
+      </Pagination>
     </Row>
   );
 }
