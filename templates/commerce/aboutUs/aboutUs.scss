@@ -1,0 +1,20 @@
+.aboutUs {
+  &__main {
+    &__title {
+      color: #E9672B;
+    }
+    &__heading {
+      font-weight: bold;
+      font-size: 30px;
+    }
+    &__descr {
+      p {
+        font-size: 14px;
+        color: #5D5F5F;
+      }
+      p:last-child {
+        margin-top: 16px;
+      }
+    }
+  }
+}
