@@ -1,0 +1,40 @@
+@import '../styles/commerce_styles/globals';
+
+.mainBanners {
+  margin-bottom: 100px;
+  &__item {
+    background-color: #FDF2E8;
+    background-image: url(/commerce_img/mainBanner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 112px;
+    padding-bottom: 113px;
+    &__subheading {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 190%;
+      color: $secondary_darker;
+      text-align: center;
+    }
+    &__heading {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 64px;
+      color: $neutral_darkest;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  &__item.second {
+    background-color: #F4F4F5;;
+  }
+}
