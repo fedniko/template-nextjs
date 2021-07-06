@@ -87,18 +87,48 @@
 
 .footer__input {
   margin-top: 20px;
-}
-
-.footer__input input {
-  background: #FFFFFF;
-  border: 1px solid #E3E3E3;
-  border-radius: 40px;
-}
-
-.footer__input button {
-  color: #FFFFFF;
-  background-color: $secondary_darkest;
-  border-color: $secondary_darkest;
+  &__form {
+    background: rgba(255,255,255, 0.1);
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    input {
+      background-color:transparent;
+      border:0;
+      height: 48px;
+      width: 100%;
+      color: #E3E3E3;
+      //width: 450px;
+      padding: 14px 12px 14px 24px;
+    }
+    input::placeholder {
+      color: #E3E3E3;
+    }
+    input:focus {
+      outline: none;
+    }
+    button {
+      background: #E9672B;
+      border: none;
+      height: 48px;
+      width: 48px;
+      border-radius: 50%;
+      padding: 14px 24px 14px 12px;
+      display: flex;
+      align-items: center;
+      img {
+        height: 24px;
+        width: 24px;
+      }
+    }
+    button:hover {
+      img {
+        opacity: 0.7;
+      }
+    }
+  }
 }
 
 .footer__bottom__container {
