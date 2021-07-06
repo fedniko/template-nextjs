@@ -11,18 +11,16 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Container>
-          <Row>
-            <Col md="3" xs="12" className="blogSidebar">
-              <BlogSidebar />
-            </Col>
-            <Col md="9" xs="12" className="blogMain">
-              <BlogMain />
-            </Col>
-          </Row>
-        </Container>
-      </main>
+      <Container>
+        <Row>
+          <Col md="3" xs="12" className="blogSidebar">
+            <BlogSidebar />
+          </Col>
+          <Col md="9" xs="12" className="blogMain">
+            <BlogMain />
+          </Col>
+        </Row>
+      </Container>
     </MainLayout>
   );
 }
