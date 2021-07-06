@@ -1,4 +1,4 @@
-.loginModal {
+.authModal {
   .modal-body {
     padding: 0px;
     overflow-y: hidden;
@@ -94,6 +94,9 @@
       }
     }
     &__form {
+      &__username {
+        margin-bottom: 30px;
+      }
       &__email {
         margin-bottom: 30px;
       }
@@ -107,6 +110,9 @@
           background: transparent;
           border: none;
         }
+      }
+      &__checkbox {
+        margin-bottom: 30px;
       }
       &__submit {
         height: 48px;

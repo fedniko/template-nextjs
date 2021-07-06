@@ -29,11 +29,14 @@ export default function MainLayout({ children }: { children: any }) {
       }
     };
   });
-  const [show, setShow] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
   const [inputType, setInputType] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleLoginClose = () => setShowLogin(false);
+  const handleSignUpClose = () => setShowSignUp(false);
+  const handleLoginShow = () => setShowLogin(true);
+  const handleSignUpShow = () => setShowSignUp(true);
 
   return (
     <>
@@ -135,13 +138,27 @@ export default function MainLayout({ children }: { children: any }) {
                   <img src="/commerce_img/cart.svg" alt="cart" />
                 </a>
               </Link>
-              <a className="text header__text" onClick={() => handleShow()}>
+              <a
+                className="text header__text"
+                onClick={() => handleLoginShow()}
+              >
                 <img
                   className="header__icon"
                   src="/commerce_img/signin.svg"
                   alt="signIn"
                 />
                 Sign in
+              </a>
+              <a
+                className="text header__text"
+                onClick={() => handleSignUpShow()}
+              >
+                <img
+                  className="header__icon"
+                  src="/commerce_img/signin.svg"
+                  alt="signIn"
+                />
+                Sign up
               </a>
             </Col>
           </Row>
@@ -340,59 +357,61 @@ export default function MainLayout({ children }: { children: any }) {
           </Container>
         </div>
       </footer>
-      <Modal show={show} onHide={handleClose} className="loginModal" centered>
+      <Modal
+        show={showLogin}
+        onHide={handleLoginClose}
+        className="authModal"
+        centered
+      >
         <Modal.Body>
           <button
-            className="loginModal__close"
+            className="authModal__close"
             type="button"
-            onClick={() => handleClose()}
+            onClick={() => handleLoginClose()}
           >
-            <img
-              src="/commerce_img/loginModal/ic-close.svg"
-              alt="close modal"
-            />
+            <img src="/commerce_img/authModal/ic-close.svg" alt="close modal" />
           </button>
 
           <Row>
-            <Col md="6" xs="12" className="loginModal__left">
-              <img src="./commerce_img/loginModal/bg.png" alt="background" />
+            <Col md="6" xs="12" className="authModal__left">
+              <img src="./commerce_img/authModal/bg.png" alt="background" />
             </Col>
-            <Col md="6" xs="12" className="loginModal__right">
+            <Col md="6" xs="12" className="authModal__right">
               <img
-                className="loginModal__right__logo"
+                className="authModal__right__logo"
                 src="/commerce_img/logo.svg"
                 alt="logo"
               />
-              <p className="loginModal__right__heading">Welcome back</p>
-              <div className="loginModal__right__signInButtons">
+              <p className="authModal__right__heading">Welcome back</p>
+              <div className="authModal__right__signInButtons">
                 <button
-                  className="loginModal__right__signInButtons__facebook"
+                  className="authModal__right__signInButtons__facebook"
                   type="button"
                 >
                   <img
-                    src="/commerce_img/loginModal/ic-facebook.svg"
+                    src="/commerce_img/authModal/ic-facebook.svg"
                     alt="facebook"
                   />
                   Sign in with Facebook
                 </button>
                 <button
-                  className="loginModal__right__signInButtons__google"
+                  className="authModal__right__signInButtons__google"
                   type="button"
                 >
                   <img
-                    src="/commerce_img/loginModal/ic-google.svg"
+                    src="/commerce_img/authModal/ic-google.svg"
                     alt="google"
                   />
                 </button>
               </div>
-              <div className="loginModal__right__dividers">
-                <div className="loginModal__right__dividers__divider" />
+              <div className="authModal__right__dividers">
+                <div className="authModal__right__dividers__divider" />
                 Or
-                <div className="loginModal__right__dividers__divider" />
+                <div className="authModal__right__dividers__divider" />
               </div>
-              <div className="loginModal__right__form">
+              <div className="authModal__right__form">
                 <Form.Group
-                  className="loginModal__right__form__email reviewForm"
+                  className="authModal__right__form__email reviewForm"
                   controlId="formEmail"
                 >
                   <Form.Label>Your email</Form.Label>
@@ -402,7 +421,7 @@ export default function MainLayout({ children }: { children: any }) {
                   />
                 </Form.Group>
                 <Form.Group
-                  className="loginModal__right__form__password reviewForm"
+                  className="authModal__right__form__password reviewForm"
                   controlId="formPassword"
                 >
                   <Form.Label>Password</Form.Label>
@@ -414,22 +433,140 @@ export default function MainLayout({ children }: { children: any }) {
                     <img
                       src={
                         inputType
-                          ? '/commerce_img/loginModal/ic-eye_on.svg'
-                          : '/commerce_img/loginModal/ic-eye_off.svg'
+                          ? '/commerce_img/authModal/ic-eye_on.svg'
+                          : '/commerce_img/authModal/ic-eye_off.svg'
                       }
                       alt="hide password"
                     />
                   </button>
                 </Form.Group>
                 <Button
-                  className="loginModal__right__form__submit"
+                  className="authModal__right__form__submit"
                   variant="primary"
                   size="lg"
                 >
                   Sign In
                 </Button>
-                <div className="loginModal__right__form__bottom">
+                <div className="authModal__right__form__bottom">
                   New member? <Link href="/">Register Now</Link>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Modal.Body>
+      </Modal>
+      <Modal
+        show={showSignUp}
+        onHide={handleSignUpClose}
+        className="authModal"
+        centered
+      >
+        <Modal.Body>
+          <button
+            className="authModal__close"
+            type="button"
+            onClick={() => handleSignUpClose()}
+          >
+            <img src="/commerce_img/authModal/ic-close.svg" alt="close modal" />
+          </button>
+
+          <Row>
+            <Col md="6" xs="12" className="authModal__left">
+              <img
+                src="./commerce_img/authModal/signUpBg.png"
+                alt="background"
+              />
+            </Col>
+            <Col md="6" xs="12" className="authModal__right">
+              <img
+                className="authModal__right__logo"
+                src="/commerce_img/logo.svg"
+                alt="logo"
+              />
+              <p className="authModal__right__heading">Hello, friend!!!</p>
+              <div className="authModal__right__signInButtons">
+                <button
+                  className="authModal__right__signInButtons__facebook"
+                  type="button"
+                >
+                  <img
+                    src="/commerce_img/authModal/ic-facebook.svg"
+                    alt="facebook"
+                  />
+                  Sign in with Facebook
+                </button>
+                <button
+                  className="authModal__right__signInButtons__google"
+                  type="button"
+                >
+                  <img
+                    src="/commerce_img/authModal/ic-google.svg"
+                    alt="google"
+                  />
+                </button>
+              </div>
+              <div className="authModal__right__dividers">
+                <div className="authModal__right__dividers__divider" />
+                Or
+                <div className="authModal__right__dividers__divider" />
+              </div>
+              <div className="authModal__right__form">
+                <Form.Group
+                  className="authModal__right__form__username reviewForm"
+                  controlId="formEmail"
+                >
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control type="text" placeholder="ex: Julie" />
+                </Form.Group>
+                <Form.Group
+                  className="authModal__right__form__email reviewForm"
+                  controlId="formEmail"
+                >
+                  <Form.Label>Your email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="ex: julie@gmail.com"
+                  />
+                </Form.Group>
+                <Form.Group
+                  className="authModal__right__form__password reviewForm"
+                  controlId="formPassword"
+                >
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type={inputType ? 'input' : 'password'} />
+                  <button
+                    type="button"
+                    onClick={() => setInputType(!inputType)}
+                  >
+                    <img
+                      src={
+                        inputType
+                          ? '/commerce_img/authModal/ic-eye_on.svg'
+                          : '/commerce_img/authModal/ic-eye_off.svg'
+                      }
+                      alt="hide password"
+                    />
+                  </button>
+                </Form.Group>
+                <Form.Group
+                  className="authModal__right__form__checkbox"
+                  controlId="formCheckbox"
+                >
+                  <Form.Check
+                    type="checkbox"
+                    label="By submitting this form you agree to our Terms and 
+Conditions"
+                  />
+                </Form.Group>
+                <Button
+                  className="authModal__right__form__submit"
+                  variant="primary"
+                  size="lg"
+                >
+                  Create Account
+                </Button>
+                <div className="authModal__right__form__bottom">
+                  Already a member? <Link href="/">Sign In</Link>
                 </div>
               </div>
             </Col>
