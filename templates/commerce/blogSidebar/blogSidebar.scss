@@ -10,6 +10,9 @@
       border-bottom-left-radius: 40px;
     }
     button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-left: none;
       background: transparent !important;
       border-top-right-radius: 40px;
