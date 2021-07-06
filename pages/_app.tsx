@@ -1,3 +1,17 @@
+// INFORM TEMPLATE
+// import '../../styles/inform_styles/globals.scss';
+// import '../../templates/inform/header.scss';
+// import '../../templates/inform/footer.scss';
+// import 'slick-carousel/slick/slick.css';
+// import 'slick-carousel/slick/slick-theme.css';
+// import '../../templates/inform/mainCarousel/mainCarousel.scss';
+// import '../../templates/inform/aboutUs/aboutUs.scss';
+// import '../../templates/inform/partners/partners.scss';
+// import '../../templates/inform/services/services.scss';
+// import '../../templates/inform/promotions/promotions.scss';
+// import '../../templates/inform/map/map.scss';
+// import '../../templates/inform/contactUs/contactUs.scss';
+// import '../../templates/inform/news/news.scss';
 import '../styles/commerce_styles/globals.scss';
 import '../templates/commerce/header.scss';
 import '../templates/commerce/footer.scss';
@@ -14,6 +28,8 @@ import '../templates/commerce/productDescr/productDescr.scss';
 import '../templates/commerce/productReview/productReview.scss';
 import '../templates/commerce/blogSidebar/blogSidebar.scss';
 import '../templates/commerce/blogMain/blogMain.scss';
+import '../templates/commerce/contactMain/contactMain.scss';
+import '../templates/commerce/contactMap/map.scss';
 import '../templates/commerce/authModals.scss';
 
 import type { AppProps } from 'next/app';
