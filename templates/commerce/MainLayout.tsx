@@ -7,7 +7,7 @@ import {
   Nav,
   Form,
   NavDropdown,
-  InputGroup,
+  Button,
   Modal,
 } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
