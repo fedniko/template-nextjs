@@ -127,8 +127,12 @@
         display: flex;
         justify-content: center;
         a {
-          color: #18a0fb;
+          color: #18a0fb !important;
           margin-left: 5px;
+          cursor: pointer;
+        }
+        a:hover {
+          color: #E9672B !important;
         }
       }
     }

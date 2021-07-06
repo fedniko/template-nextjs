@@ -149,17 +149,6 @@ export default function MainLayout({ children }: { children: any }) {
                 />
                 Sign in
               </a>
-              <a
-                className="text header__text"
-                onClick={() => handleSignUpShow()}
-              >
-                <img
-                  className="header__icon"
-                  src="/commerce_img/signin.svg"
-                  alt="signIn"
-                />
-                Sign up
-              </a>
             </Col>
           </Row>
         </Container>
@@ -448,7 +437,15 @@ export default function MainLayout({ children }: { children: any }) {
                   Sign In
                 </Button>
                 <div className="authModal__right__form__bottom">
-                  New member? <Link href="/">Register Now</Link>
+                  New member?
+                  <a
+                    onClick={() => {
+                      handleLoginClose();
+                      handleSignUpShow();
+                    }}
+                  >
+                    Register Now
+                  </a>
                 </div>
               </div>
             </Col>
@@ -566,7 +563,15 @@ Conditions"
                   Create Account
                 </Button>
                 <div className="authModal__right__form__bottom">
-                  Already a member? <Link href="/">Sign In</Link>
+                  Already a member?
+                  <a
+                    onClick={() => {
+                      handleSignUpClose();
+                      handleLoginShow();
+                    }}
+                  >
+                    Sign in
+                  </a>
                 </div>
               </div>
             </Col>
