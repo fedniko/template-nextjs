@@ -101,14 +101,11 @@ export default function MainLayout({ children }: { children: any }) {
               md="4"
               className="header__search"
             >
-              <Form className="d-flex">
-                <FormControl
-                  type="search"
-                  placeholder="Search"
-                  className="mr-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
+              <Form className="d-flex header__search__form">
+                <input type="text" placeholder="Search..." />
+                <button type="submit">
+                  <img src="/commerce_img/search.svg" alt="search" />
+                </button>
               </Form>
             </Col>
             <Col
