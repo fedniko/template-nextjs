@@ -1,0 +1,116 @@
+.loginModal {
+  .modal-body {
+    padding: 0px;
+    overflow-y: hidden;
+    .row {
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .modal-content {
+    border: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px; 
+  }
+  .modal-dialog {
+    max-width: 930px;
+  }
+  &__left, &__right {
+    padding: 0px;
+  }
+  &__left {
+    img {
+      width: 100%;
+    }
+  }
+  &__right {
+    padding: 40px 30px;
+    &__logo {
+      margin-bottom: 30px;
+    }
+    &__heading {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    &__signInButtons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      &__facebook, &__google {
+        height: 36px;
+        outline: none;
+        border: none;
+      }
+      &__facebook {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 20px rgba(97, 97, 103, 0.18);
+        border-radius: 40px;
+        margin-right: 12px;
+        font-size: 12px;
+        img {
+          margin-right: 12px;
+        }
+      }
+      &__google {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 36px;
+        border-radius: 50%;
+      }
+    }
+    &__dividers {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-bottom: 16px;
+      color:#5D5F5F;
+      &__divider {
+        height: 2px;
+        width: calc(50% - 20px);
+        background: #F4F4F5;
+      }
+    }
+    &__form {
+      &__email {
+        margin-bottom: 30px;
+      }
+      &__password {
+        position: relative;
+        margin-bottom: 30px;
+        button {
+          top: 43px;
+          right: 15px;
+          position: absolute;
+          background: transparent;
+          border: none;
+        }
+      }
+      &__submit {
+        height: 48px;
+        width: 100%;
+        font-size: 14px;
+        color: white;
+        background: #E9672B;
+        border-radius: 40px;
+        margin-bottom: 24px;
+      }
+      &__bottom {
+        display: flex;
+        justify-content: center;
+        a {
+          color: #18a0fb;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

@@ -10,8 +10,9 @@ import {
   Button,
   NavDropdown,
   InputGroup,
+  Modal,
 } from 'react-bootstrap';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function MainLayout({ children }: { children: any }) {
   useEffect(() => {
@@ -28,6 +29,12 @@ export default function MainLayout({ children }: { children: any }) {
       }
     };
   });
+  const [show, setShow] = useState(false);
+  const [inputType, setInputType] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <header className="header">
@@ -128,16 +135,14 @@ export default function MainLayout({ children }: { children: any }) {
                   <img src="/commerce_img/cart.svg" alt="cart" />
                 </a>
               </Link>
-              <Link href="/">
-                <a className="text header__text">
-                  <img
-                    className="header__icon"
-                    src="/commerce_img/signin.svg"
-                    alt="signIn"
-                  />
-                  Sign in
-                </a>
-              </Link>
+              <a className="text header__text" onClick={() => handleShow()}>
+                <img
+                  className="header__icon"
+                  src="/commerce_img/signin.svg"
+                  alt="signIn"
+                />
+                Sign in
+              </a>
             </Col>
           </Row>
         </Container>
@@ -335,6 +340,91 @@ export default function MainLayout({ children }: { children: any }) {
           </Container>
         </div>
       </footer>
+      <Modal show={show} onHide={handleClose} className="loginModal" centered>
+        <Modal.Body>
+          <Row>
+            <Col md="6" xs="12" className="loginModal__left">
+              <img src="./commerce_img/loginModal/bg.png" alt="background" />
+            </Col>
+            <Col md="6" xs="12" className="loginModal__right">
+              <img
+                className="loginModal__right__logo"
+                src="/commerce_img/logo.svg"
+                alt="logo"
+              />
+              <p className="loginModal__right__heading">Welcome back</p>
+              <div className="loginModal__right__signInButtons">
+                <button
+                  className="loginModal__right__signInButtons__facebook"
+                  type="button"
+                >
+                  <img
+                    src="/commerce_img/loginModal/ic-facebook.svg"
+                    alt="facebook"
+                  />
+                  Sign in with Facebook
+                </button>
+                <button
+                  className="loginModal__right__signInButtons__google"
+                  type="button"
+                >
+                  <img
+                    src="/commerce_img/loginModal/ic-google.svg"
+                    alt="google"
+                  />
+                </button>
+              </div>
+              <div className="loginModal__right__dividers">
+                <div className="loginModal__right__dividers__divider" />
+                Or
+                <div className="loginModal__right__dividers__divider" />
+              </div>
+              <div className="loginModal__right__form">
+                <Form.Group
+                  className="loginModal__right__form__email reviewForm"
+                  controlId="formEmail"
+                >
+                  <Form.Label>Your email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="ex: julie@gmail.com"
+                  />
+                </Form.Group>
+                <Form.Group
+                  className="loginModal__right__form__password reviewForm"
+                  controlId="formPassword"
+                >
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type={inputType ? 'input' : 'password'} />
+                  <button
+                    type="button"
+                    onClick={() => setInputType(!inputType)}
+                  >
+                    <img
+                      src={
+                        inputType
+                          ? '/commerce_img/loginModal/ic-eye_on.svg'
+                          : '/commerce_img/loginModal/ic-eye_off.svg'
+                      }
+                      alt="hide password"
+                    />
+                  </button>
+                </Form.Group>
+                <Button
+                  className="loginModal__right__form__submit"
+                  variant="primary"
+                  size="lg"
+                >
+                  Sign In
+                </Button>
+                <div className="loginModal__right__form__bottom">
+                  New member? <Link href="/">Register Now</Link>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Modal.Body>
+      </Modal>
     </>
   );
 }
