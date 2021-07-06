@@ -117,7 +117,7 @@ export default function BlogMain() {
           <div className="blogMain__post__descr">{post.description}</div>
         </Col>
       ))}
-      <Pagination>
+      <Pagination className="mb-5">
         <Pagination.Prev>Pre</Pagination.Prev>
         <Pagination.Item active>{1}</Pagination.Item>
         <Pagination.Item>{2}</Pagination.Item>
