@@ -5,11 +5,8 @@ import {
   Row,
   Navbar,
   Nav,
-  FormControl,
   Form,
-  Button,
   NavDropdown,
-  InputGroup,
 } from 'react-bootstrap';
 import { useEffect } from 'react';
 
@@ -272,16 +269,14 @@ export default function MainLayout({ children }: { children: any }) {
                   Sign up for our Newsletter to get more events, promotions &
                   news from us!
                 </p>
-                <InputGroup className="mb-3 footer__input">
-                  <FormControl
-                    placeholder="Enter your email"
-                    aria-label="Recipient's username"
-                    aria-describedby="basic-addon2"
-                  />
-                  <Button variant="outline-secondary" id="button-addon2">
-                    Button
-                  </Button>
-                </InputGroup>
+                <div className="footer__input">
+                  <Form className="footer__input__form">
+                    <input type="text" placeholder="Enter your email" />
+                    <button type="submit">
+                      <img src="/commerce_img/footer_button.svg" alt="search" />
+                    </button>
+                  </Form>
+                </div>
               </Col>
             </Row>
           </Container>

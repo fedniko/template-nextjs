@@ -97,28 +97,28 @@
     border-radius: 40px;
     display: flex;
     align-items: center;
-  }
-  input {
-    background-color:transparent;
-    border:0;
-    height: 48px;
-    //width: 450px;
-    padding: 14px 12px 14px 24px;
-  }
-  input:focus {
-    outline: none;
-  }
-  button {
-    background-color:transparent;
-    border:0;
-    padding: 14px 24px 14px 12px;
-    img {
-      height: 24px;
+    input {
+      background-color:transparent;
+      border:0;
+      height: 48px;
+      padding: 14px 12px 14px 24px;
+      color: $neutral_darker;
     }
-  }
-  button:hover {
-    img {
-      opacity: 0.7;
+    input:focus {
+      outline: none;
+    }
+    button {
+      background-color:transparent;
+      border:0;
+      padding: 14px 24px 14px 12px;
+      img {
+        height: 24px;
+      }
+    }
+    button:hover {
+      img {
+        opacity: 0.7;
+      }
     }
   }
 }
