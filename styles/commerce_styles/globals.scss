@@ -141,3 +141,8 @@ a:hover {
     margin-right: 5px;
   }
 }
+
+// при открытии модального окна появлялся паддинг 17px
+.modal-open {
+  padding-right: 0px !important;
+}

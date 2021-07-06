@@ -10,10 +10,8 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <ProductDescr />
-        <ProductReview />
-      </main>
+      <ProductDescr />
+      <ProductReview />
     </MainLayout>
   );
 }
