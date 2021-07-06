@@ -243,7 +243,7 @@ export default function MainLayout({ children }: { children: any }) {
                     <Link href="/">
                       <a className="text footer__text">Sale</a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/contact">
                       <a className="text footer__text">Contact</a>
                     </Link>
                   </div>
