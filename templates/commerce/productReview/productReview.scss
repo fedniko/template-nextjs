@@ -55,41 +55,6 @@
             }
           }
         }
-        &__pagination {
-          display: flex;
-          justify-content: center;
-          height: 32px;
-          margin-top: 40px;
-          li {
-            font-size: 12px;
-            height: 32px;
-            width: 33px;
-            span, a {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              color: #5D5F5F;
-              font-weight: bold;
-              border: 1px solid transparent;
-              border-radius: 4px;
-            }
-          }
-          li.active {
-            span {
-              background-color: #5D5F5F !important;
-              border: 1px solid #5D5F5F !important;
-            }
-          }
-          li:first-child, li:last-child {
-            width: 51px;
-            a {
-              border: 1px solid #5D5F5F;
-            }
-          }
-          li:not(:last-child) {
-            margin-right: 5px;
-          }
-        }
       }
       &__reviewForm {
         margin-left: 90px;

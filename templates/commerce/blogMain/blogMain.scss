@@ -1,0 +1,34 @@
+.blogMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__post {
+    &__img {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    &__author {
+      font-size: 14px;
+      color: #B6B8B8;
+      margin-bottom: 8px;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+  &__post.big {
+    .blogMain__post__img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .blogMain__post__author {
+      margin-bottom: 8px;
+    }
+    .blogMain__post__title {
+      margin-bottom: 12px;
+    }
+    .blogMain__post__descr {
+      margin-bottom: 40px;
+    }
+  }
+}

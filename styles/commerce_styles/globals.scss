@@ -86,3 +86,46 @@ p, h1, h2, h5 {
 a:hover {
   color: $secondary_darkest;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  margin-top: 40px;
+  li {
+    font-size: 12px;
+    height: 32px;
+    width: 33px;
+    span, a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #5D5F5F;
+      font-weight: bold;
+      border: 1px solid transparent;
+      border-radius: 4px;
+    }
+    a:hover {
+      color: #5D5F5F !important;
+    }
+    a:focus {
+      box-shadow: none;
+      color: #5D5F5F !important;
+    }
+  }
+  li.active {
+    span {
+      background-color: #5D5F5F !important;
+      border: 1px solid #5D5F5F !important;
+    }
+  }
+  li:first-child, li:last-child {
+    width: 51px;
+    a {
+      border: 1px solid #5D5F5F;
+    }
+  }
+  li:not(:last-child) {
+    margin-right: 5px;
+  }
+}
