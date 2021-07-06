@@ -9,6 +9,8 @@ import '../templates/commerce/itemList/itemCarousel.scss';
 import '../templates/commerce/itemList/popularCategories.scss';
 import '../templates/commerce/productDescr/productDescr.scss';
 import '../templates/commerce/productReview/productReview.scss';
+import '../templates/commerce/blogSidebar/blogSidebar.scss';
+import '../templates/commerce/blogMain/blogMain.scss';
 
 import type { AppProps } from 'next/app';
 import wrapper from '../redux/store';
