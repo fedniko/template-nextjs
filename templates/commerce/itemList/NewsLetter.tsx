@@ -18,7 +18,7 @@ export default function NewsLetter() {
                   Will be used in accordance with our Privacy Policy
                 </Form.Text>
               </Form.Group>
-              <Button variant="primary" type="submit">
+              <Button variant="primary" type="submit" className="button">
                 SIGN UP
               </Button>
             </Form>

@@ -91,7 +91,7 @@ export default function MainCarousel() {
                   <Button
                     variant="outline-primary"
                     size="lg"
-                    className="button main__carousel__button"
+                    className="button_outline main__carousel__button"
                   >
                     Take This Look
                   </Button>{' '}
