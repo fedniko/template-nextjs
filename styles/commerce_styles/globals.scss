@@ -45,7 +45,7 @@ a {
   box-sizing: border-box;
 }
 
-p, h1, h2, h5 {
+p, h1, h2, h3, h4, h5 {
   margin-bottom: 0;
 }
 
@@ -64,6 +64,7 @@ p, h1, h2, h5 {
   font-size: 30px;
   line-height: 48px;
   text-align: center;
+  color: $neutral_darkest;
 }
 
 .heading-div {
