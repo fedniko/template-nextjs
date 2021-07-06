@@ -29,6 +29,7 @@ import '../templates/commerce/productReview/productReview.scss';
 import '../templates/commerce/blogSidebar/blogSidebar.scss';
 import '../templates/commerce/blogMain/blogMain.scss';
 import '../templates/commerce/contactMain/contactMain.scss';
+import '../templates/commerce/contactMap/map.scss';
 
 import type { AppProps } from 'next/app';
 import wrapper from '../redux/store';

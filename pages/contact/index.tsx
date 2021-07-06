@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import MainLayout from '../../templates/commerce/MainLayout';
 import ContactMain from '../../templates/commerce/contactMain/ContactMain';
+import Maps from '../../templates/commerce/contactMap/Map';
 
 export default function ContactUs() {
   return (
@@ -10,6 +11,7 @@ export default function ContactUs() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ContactMain />
+      <Maps />
     </MainLayout>
   );
 }
