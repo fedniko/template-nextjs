@@ -5,14 +5,14 @@ export default function AboutUs() {
     <section className="aboutUs">
       <Container>
         <Row className="align-items-center">
-          <Col md="6" xs="12" className="aboutUs__img">
+          <Col lg="6" xs="12" className="aboutUs__img">
             <img
               className="img-fluid"
               src="/commerce_img/aboutUs/img1.png"
               alt="img1"
             />
           </Col>
-          <Col md="6" xs="12" className="aboutUs__main">
+          <Col lg="6" xs="12" className="aboutUs__main">
             <div className="aboutUs__main__title">ABOUT US</div>
             <div className="aboutUs__main__heading">
               Just Stay Home & Enjoy <br /> Your Shopping Time

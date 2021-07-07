@@ -10,13 +10,14 @@
       margin-bottom: 16px;
     }
     &__imgs {
+      display: grid;
+      grid-template-columns: 55% 40%;
+      column-gap: 5%;
+      align-items: center;
       margin-bottom: 60px;
-      img:first-child {
-        width: 570px;
-        margin-right: 50px;
-      }
-      img:last-child {
-        width: 450px;
+      img {
+        object-fit: contain;
+        width: 100%;
       }
     }
     p {
