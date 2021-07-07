@@ -1,0 +1,114 @@
+.faq {
+  margin-bottom: 100px;
+
+  &__heading {
+    text-align: start;
+    line-height: 40px;
+    margin-bottom: 12px;
+  }
+  &__subheading {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 20px;
+  }
+}
+
+.accordion-item__service {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.services__accordion :last-child {
+  padding-bottom: 0;
+}
+
+.accordion-item__trigger {
+  background: #F4F4F5;
+  border-radius: 4px 4px 0 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #1D1F1F;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 16px 70px 16px 30px;
+}
+
+.accordion-item__span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #5D5F5F;
+  margin-right: 30px;
+}
+
+.accordion-item__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #5D5F5F;
+  text-align: left;
+  white-space: pre-wrap;
+  padding: 0 30px;
+}
+
+.accordion-item__content.active {
+  max-height: 500px;
+  padding: 20px 30px;
+  border: 1px solid #F4F4F5;
+  border-radius: 4px;
+}
+
+.accordion-item__trigger:before {
+  /*-webkit-transform: translate(-50%,-50%) rotate(0);*/
+  transform: translate(-50%,-50%) rotate(90deg);
+  will-change: translate,rotate;
+}
+
+.accordion-item__trigger:after {
+  transform: translate(-50%,-50%);
+  will-change: translate,opacity;
+}
+
+.accordion-item__trigger.active:before {
+  transform:translate(-50%,-50%) rotate(-0deg);
+}
+
+.accordion-item__trigger:after,
+.accordion-item__trigger:before {
+  content: "";
+  width: 14px;
+  height: 2px;
+  background-color: #1D1F1F;
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  transition: all .2s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .accordion-item__content.active {
+    max-height: 650px;
+  }
+}
+
+@media (max-width: 575px) {
+  .accordion-item__content.active {
+    max-height: none;
+  }
+}
