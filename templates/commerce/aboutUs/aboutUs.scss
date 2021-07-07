@@ -1,0 +1,57 @@
+.aboutUs {
+  margin-bottom: 80px;
+  &__main {
+    padding-left: 100px;
+    &__title {
+      color: #E9672B;
+    }
+    &__heading {
+      font-weight: bold;
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+    &__descr {
+      margin-bottom: 30px;
+      p {
+        font-size: 14px;
+        color: #5D5F5F;
+      }
+      p:last-child {
+        margin-top: 16px;
+      }
+    }
+    &__features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      &__delivery, &__moneyback, &__support, &__gift {
+        display: flex;
+        align-items: center;
+        img {
+          padding: 12px;
+          border-radius: 50%;
+          border: 1px solid #E9672B;
+          margin-right: 12px;
+        }
+        p {
+          font-size: 14px;
+        }
+        p:last-child {
+          color: #5D5F5F;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .aboutUs {
+    &__img {
+      margin-bottom: 24px;
+    }
+    &__main {
+      padding-left: calc(var(--bs-gutter-x) / 2);
+    }
+  }
+}

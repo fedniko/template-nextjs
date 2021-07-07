@@ -32,6 +32,9 @@ import '../templates/commerce/blogMain/blogMain.scss';
 import '../templates/commerce/contactMain/contactMain.scss';
 import '../templates/commerce/contactMap/map.scss';
 import '../templates/commerce/authModals.scss';
+import '../templates/commerce/aboutUs/aboutAdvantages.scss';
+import '../templates/commerce/aboutUs/aboutUs.scss';
+import '../templates/commerce/aboutUs/aboutPartners.scss';
 
 import type { AppProps } from 'next/app';
 import wrapper from '../redux/store';

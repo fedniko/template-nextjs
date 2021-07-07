@@ -1,0 +1,33 @@
+.aboutPartners {
+  margin-bottom: 80px;
+  &__col {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    column-gap: 20px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      opacity: 0.6;
+      transition: all 0.2s ease-in;
+    }
+    img:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .aboutPartners {
+    &__col {
+      display: flex;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      justify-content: center;
+      gap: 10px;
+      img {
+        width: calc(50% - 10px);
+      }
+    }
+  }
+}
