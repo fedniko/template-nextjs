@@ -1,0 +1,186 @@
+.cart {
+  margin-bottom: 80px;
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    img {
+      margin-bottom: 30px;
+    }
+    button {
+      margin-top: 30px;
+      width: 410px;
+    }
+  }
+  &__title {
+    display: flex;
+    text-align: start;
+    margin-bottom: 30px;
+    &__items {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__productsRow {
+    display: grid;
+    grid-template-columns: calc(70% - 30px) 30%;
+    column-gap: 30px;
+    &__itemsRow {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+  &__products, &__summary {
+    border: 1px solid #E3E3E3;
+  }
+  &__products {
+    height: fit-content;
+    margin-left: 12px;
+    .row:not(:last-child) {
+      border-bottom: 1px solid #E3E3E3;
+    }
+    &__delete {
+      &__button {
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+    }
+    &__delete, &__quantity, &__price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__quantity {
+      &__input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 24px;
+        height: 48px;
+        width: 152px;
+        border: 1px solid #E3E3E3;
+        border-radius: 40px;
+        background: transparent;
+        &__arrows {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          button {
+            height: 5px;
+            background: transparent;
+            border: none;
+            outline: none;
+          }
+          button:first-child {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+    &__price {
+      font-weight: bold;
+    }
+    &__closeIcon {
+      opacity: 0.5;
+    }
+    &__head {
+      color: #5D5F5F;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      &__img {
+        max-height: 96px;
+        max-width: 96px;
+        margin-right: 12px;
+      }
+      &__descr {
+        &__name {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+        &__color {
+          margin-bottom: 8px;
+        }
+        &__color, &__dimension {
+          font-size: 12px;
+          color: #5D5F5F;
+        }
+      }
+    }
+  }
+  &__summary {
+    padding: 20px;
+    margin-right: 12px;
+    &__title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    &__subtotal, &__shipping, &__total {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      p {
+        color: #5D5F5F;
+        font-size: 16px;
+      }
+      p:last-child {
+        color: #1D1F1F;
+        font-weight: bold;
+      }
+    }
+    &__discount {
+      margin-bottom: 16px;
+      &__title {
+        margin-bottom: 16px;
+      }
+      &__form {
+        div {
+          width: 70%;
+        }
+        button {
+          padding: 13px 12px;
+          width: 30%;
+        }
+      }
+    }
+    &__total {
+      p:last-child {
+        font-size: 20px;
+      }
+    }
+    &__checkout {
+      width: 100%;
+      background: #1D1F1F;
+      border: none;
+      margin-bottom: 16px;
+    }
+    &__pay_icons {
+      display: flex;
+      justify-content: center;
+      img:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+  &__continue {
+    margin-top: 22px;
+    button {
+      display: flex;
+      align-items: center;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      img {
+        margin-right: 12px;
+      }
+    }
+  }
+}

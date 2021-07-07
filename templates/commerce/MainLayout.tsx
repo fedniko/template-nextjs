@@ -128,7 +128,7 @@ export default function MainLayout({ children }: { children: any }) {
                   <img src="/commerce_img/hearth.svg" alt="hearth" />
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/cart">
                 <a className="text header__text">
                   <img src="/commerce_img/cart.svg" alt="cart" />
                 </a>
