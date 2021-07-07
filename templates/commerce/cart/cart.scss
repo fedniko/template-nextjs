@@ -184,3 +184,16 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .cart {
+    &__productsRow {
+      grid-template-columns: 100%;
+    }
+    &__products {
+      &__item {
+        flex-direction: column;
+      }
+    }
+  }
+}

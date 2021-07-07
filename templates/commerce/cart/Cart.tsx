@@ -65,26 +65,26 @@ export default function Cart() {
         <Row className="cart__productsRow">
           <div className="cart__products">
             <Row className="cart__productsRow__headRow">
-              <Col className="cart__products__head" md="1" />
-              <Col className="cart__products__head" md="5">
+              <Col className="cart__products__head" xs="1" />
+              <Col className="cart__products__head" xs="5">
                 Products
               </Col>
               <Col
                 className="cart__products__head d-flex justify-content-center"
-                md="3"
+                xs="3"
               >
                 Quantity
               </Col>
               <Col
                 className="cart__products__head d-flex justify-content-center"
-                md="3"
+                xs="3"
               >
                 Total
               </Col>
             </Row>
             {items.map((item) => (
               <Row className="cart__productsRow__itemsRow">
-                <Col className="cart__products__delete" md="1">
+                <Col className="cart__products__delete" xs="1">
                   <button
                     onClick={() => deleteItem(item.id)}
                     className="cart__products__delete__button"
@@ -97,7 +97,7 @@ export default function Cart() {
                     />
                   </button>
                 </Col>
-                <Col className="cart__products__item" md="5">
+                <Col className="cart__products__item" xs="5">
                   <img
                     className="cart__products__item__img"
                     src={item.img}
@@ -115,7 +115,7 @@ export default function Cart() {
                     </p>
                   </div>
                 </Col>
-                <Col className="cart__products__quantity" md="3">
+                <Col className="cart__products__quantity" xs="3">
                   <div className="cart__products__quantity__input">
                     <div className="cart__products__quantity__input__count">
                       {item.quantity}
@@ -143,7 +143,7 @@ export default function Cart() {
                     </div>
                   </div>
                 </Col>
-                <Col className="cart__products__price" md="3">
+                <Col className="cart__products__price" xs="3">
                   ${item.price}
                 </Col>
               </Row>
