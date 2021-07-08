@@ -77,7 +77,7 @@ export default function Cart() {
               </Col>
             </Row>
             {items.map((item) => (
-              <Row className="cart__productsRow__itemsRow">
+              <Row className="cart__productsRow__itemsRow" key={item.name}>
                 <Col className="cart__products__delete" xs="1">
                   <button
                     onClick={() => deleteItem(item.id)}
