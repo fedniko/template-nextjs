@@ -31,6 +31,7 @@ import '../templates/commerce/blogSidebar/blogSidebar.scss';
 import '../templates/commerce/blogMain/blogMain.scss';
 import '../templates/commerce/shopList/shopBanner.scss';
 import '../templates/commerce/shopList/shopList.scss';
+import '../templates/commerce/shopFilter/shopFilter.scss';
 import '../templates/commerce/contactMain/contactMain.scss';
 import '../templates/commerce/contactMap/map.scss';
 import '../templates/commerce/authModals.scss';

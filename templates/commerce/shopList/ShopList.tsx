@@ -1,6 +1,7 @@
 import { Button, Col, Container, Pagination, Row, Form } from 'react-bootstrap';
 import Link from 'next/link';
 import { useState } from 'react';
+import ShopFilter from '../shopFilter/ShopFilter';
 
 export default function ShopList() {
   const [products] = useState([
@@ -151,27 +152,29 @@ export default function ShopList() {
       <Container>
         <Row>
           <Col xs="3">
-            <p>Filter</p>
+            <ShopFilter />
           </Col>
           <Col xs="9">
             <Row className="shopList__right__top">
               <Col className="shopList__select">
                 <Form.Group className="shopList__select__group">
                   <Form.Label>Show</Form.Label>
-                  <Form.Select aria-label="Default select example">
+                  <Form.Select
+                    aria-label="Default select example"
+                    defaultValue="2"
+                  >
                     <option value="1">10</option>
-                    <option value="2" selected>
-                      20
-                    </option>
+                    <option value="2">20</option>
                     <option value="3">30</option>
                   </Form.Select>
                 </Form.Group>
                 <Form.Group className="shopList__select__group">
                   <Form.Label>Sort by</Form.Label>
-                  <Form.Select aria-label="Default select example">
-                    <option value="1" selected>
-                      Price Low to High
-                    </option>
+                  <Form.Select
+                    aria-label="Default select example"
+                    defaultValue="1"
+                  >
+                    <option value="1">Price Low to High</option>
                     <option value="2">Price High to Low</option>
                     <option value="3">Rating High to Low</option>
                   </Form.Select>

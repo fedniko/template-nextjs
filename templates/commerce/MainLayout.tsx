@@ -156,7 +156,7 @@ export default function MainLayout({ children }: { children: any }) {
                 <Link href="/">
                   <a className="nav-link active text">Home</a>
                 </Link>
-                <Link href="/">
+                <Link href="/shop">
                   <a className="nav-link text">Shop</a>
                 </Link>
                 <Link href="/blog">
