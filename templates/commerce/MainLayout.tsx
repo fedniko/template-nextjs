@@ -123,12 +123,12 @@ export default function MainLayout({ children }: { children: any }) {
               lg={{ span: 3, offset: 1 }}
               className="header__links"
             >
-              <Link href="/">
+              <Link href="/wishlist">
                 <a className="text header__text">
                   <img src="/commerce_img/hearth.svg" alt="hearth" />
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/cart">
                 <a className="text header__text">
                   <img src="/commerce_img/cart.svg" alt="cart" />
                 </a>
