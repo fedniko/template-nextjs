@@ -1,0 +1,50 @@
+.shopList {
+  margin-bottom: 100px;
+  &__select {
+    display: flex;
+    &__group {
+      display: flex;
+      align-items: center;
+      .form-label {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        color: #5D5F5F;
+        white-space: nowrap;
+        margin-bottom: 0;
+      }
+      .form-select {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        color: #1D1F1F;
+        border: none;
+      }
+      .form-select:hover {
+        cursor: pointer;
+      }
+      .form-select:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.shopList__right__top {
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #F4F4F5;
+}
+
+.shopList__icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  img {
+    margin-left: 20px;
+  }
+}
