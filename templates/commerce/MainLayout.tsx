@@ -355,7 +355,7 @@ export default function MainLayout({ children }: { children: any }) {
           </button>
 
           <Row>
-            <Col md="6" xs="12" className="authModal__left">
+            <Col md="6" xs="12" className="authModal__left d-none d-sm-block">
               <img src="./commerce_img/authModal/bg.png" alt="background" />
             </Col>
             <Col md="6" xs="12" className="authModal__right">
@@ -461,7 +461,7 @@ export default function MainLayout({ children }: { children: any }) {
           </button>
 
           <Row>
-            <Col md="6" xs="12" className="authModal__left">
+            <Col md="6" xs="12" className="authModal__left d-none d-sm-block">
               <img
                 src="./commerce_img/authModal/signUpBg.png"
                 alt="background"
