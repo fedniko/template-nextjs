@@ -160,6 +160,10 @@
       background: #1D1F1F;
       border: none;
       margin-bottom: 16px;
+      &:hover {
+        background: #5D5F5F;
+        color: white;
+      }
     }
     &__pay_icons {
       display: flex;
@@ -188,11 +192,19 @@
 @media (max-width: 767px) {
   .cart {
     &__productsRow {
+      margin: 0px 2px;
       grid-template-columns: 100%;
     }
     &__products {
+      margin: 0px;
+      margin-bottom: 16px;
       &__item {
         flex-direction: column;
+      }
+    }
+    &__empty {
+      button {
+        width: 80%;
       }
     }
   }
