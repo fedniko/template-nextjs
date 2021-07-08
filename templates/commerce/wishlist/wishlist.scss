@@ -1,0 +1,106 @@
+.wishlist {
+  margin-bottom: 80px;
+  &__mainRow {
+    border: 1px solid #E3E3E3;
+  }
+  &__headRow {
+    color: #5D5F5F;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #E3E3E3;
+  }
+  &__itemsRow {
+    padding: 24px 0px;
+    &__delete, &__total, &__available, &__quantity, &__buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      &__img {
+        max-height: 96px;
+        max-width: 96px;
+        margin-right: 12px;
+      }
+      &__descr {
+        &__name {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+        &__color {
+          margin-bottom: 8px;
+        }
+        &__color, &__dimension {
+          font-size: 12px;
+          color: #5D5F5F;
+        }
+      }
+    }
+    &__total {
+      font-weight: bold;
+    }
+    &__available {
+      color: #DA3E31;
+    }
+    &__quantity {
+      &__input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 24px;
+        height: 48px;
+        width: 152px;
+        border: 1px solid #E3E3E3;
+        border-radius: 40px;
+        background: transparent;
+        &__arrows {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          button {
+            height: 5px;
+            background: transparent;
+            border: none;
+            outline: none;
+          }
+          button:first-child {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+    &__buttons {
+      button {
+        height: 48px;
+        width: 145px;
+        border-radius: 40px;
+        font-size: 14px;
+        padding: inherit;
+      }
+      button:first-child {
+        margin-right: 16px;
+      }
+    }
+  }
+  &__itemsRow:not(:last-child) {
+    border-bottom: 1px solid #E3E3E3;
+  }
+}
+
+.wishlist__itemsRow__delete, .wishlist__itemsRow__quantity__input__arrows {
+  button {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .wishlist {
+    &__mainRow {
+      overflow-y: auto;
+    }
+  }
+}

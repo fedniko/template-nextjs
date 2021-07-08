@@ -36,6 +36,7 @@ import '../templates/commerce/aboutUs/aboutAdvantages.scss';
 import '../templates/commerce/aboutUs/aboutUs.scss';
 import '../templates/commerce/aboutUs/aboutPartners.scss';
 import '../templates/commerce/cart/cart.scss';
+import '../templates/commerce/wishlist/wishlist.scss';
 
 import type { AppProps } from 'next/app';
 import wrapper from '../redux/store';

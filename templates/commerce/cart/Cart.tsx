@@ -31,12 +31,6 @@ export default function Cart() {
     setItems(updatedState);
   }
 
-  function increaseQuantity(index: number) {
-    const currentState = items;
-    currentState[index - 1].quantity = currentState[index - 1].quantity + 1;
-    setItems(currentState);
-  }
-
   if (items.length === 0) {
     return (
       <section className="cart">
@@ -121,12 +115,7 @@ export default function Cart() {
                       {item.quantity}
                     </div>
                     <div className="cart__products__quantity__input__arrows">
-                      <button
-                        type="button"
-                        onClick={() => {
-                          increaseQuantity(item.id);
-                        }}
-                      >
+                      <button type="button">
                         <img
                           className="cart__products__quantity__input__arrows"
                           src="/commerce_img/cart/arrow-up.svg"
