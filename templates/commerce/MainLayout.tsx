@@ -11,6 +11,8 @@ import {
   Modal,
 } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { IRootState } from '../../redux/types';
 
 export default function MainLayout({ children }: { children: any }) {
   useEffect(() => {
@@ -35,6 +37,8 @@ export default function MainLayout({ children }: { children: any }) {
   const handleSignUpClose = () => setShowSignUp(false);
   const handleLoginShow = () => setShowLogin(true);
   const handleSignUpShow = () => setShowSignUp(true);
+
+  const { counter } = useSelector((state: IRootState) => state.cart);
 
   return (
     <>
@@ -131,6 +135,7 @@ export default function MainLayout({ children }: { children: any }) {
               <Link href="/cart">
                 <a className="text header__text">
                   <img src="/commerce_img/cart.svg" alt="cart" />
+                  <span>{counter}</span>
                 </a>
               </Link>
               <a

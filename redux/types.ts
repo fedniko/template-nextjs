@@ -7,7 +7,12 @@ export interface ISecondReducer {
   name: string;
 }
 
+export interface IAddToCartReducer {
+  counter: number;
+}
+
 export interface IRootState {
   first: IFirstReducer;
   second: ISecondReducer[];
+  cart: IAddToCartReducer;
 }
