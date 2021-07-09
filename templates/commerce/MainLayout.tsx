@@ -49,27 +49,36 @@ export default function MainLayout({ children }: { children: any }) {
     password: '',
   });
 
-  const clearInputs = () =>
+  const [errors, setErrors] = useState<any>({});
+
+  const clearInputs = () => {
+    setErrors({});
     setCredentials({ name: '', email: '', password: '' });
+  };
 
   function loginRequest() {
+    setErrors({});
     API.post('auth/login', credentials)
       .then(({ data }) => {
         dispatch({ type: 'LOG_IN', ...data });
         handleLoginClose();
       })
       .catch((error) => {
+        console.log('error: ', error);
+        setErrors(error?.response.data.errors);
         console.error('loginRequest:', error);
       });
   }
 
   function registerRequest() {
+    setErrors({});
     API.post('auth/register', credentials)
       .then(() => {
         handleSignUpClose();
         handleLoginShow();
       })
       .catch((error) => {
+        setErrors(error?.response.data.errors);
         console.error('registerRequest:', error);
       });
   }
@@ -446,7 +455,11 @@ export default function MainLayout({ children }: { children: any }) {
                         email: e.target.value,
                       })
                     }
+                    isInvalid={errors.email?.length > 0}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.email !== undefined && errors.email[0]}
+                  </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group
                   className="authModal__right__form__password reviewForm"
@@ -462,7 +475,11 @@ export default function MainLayout({ children }: { children: any }) {
                         password: e.target.value,
                       })
                     }
+                    isInvalid={errors.password?.length > 0}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.password !== undefined && errors.password[0]}
+                  </Form.Control.Feedback>
                   <button
                     type="button"
                     onClick={() => setInputType(!inputType)}
@@ -573,7 +590,11 @@ export default function MainLayout({ children }: { children: any }) {
                         name: e.target.value,
                       })
                     }
+                    isInvalid={errors.name?.length > 0}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.name !== undefined && errors.name[0]}
+                  </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group
                   className="authModal__right__form__email reviewForm"
@@ -590,7 +611,11 @@ export default function MainLayout({ children }: { children: any }) {
                         email: e.target.value,
                       })
                     }
+                    isInvalid={errors.email?.length > 0}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.email !== undefined && errors.email[0]}
+                  </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group
                   className="authModal__right__form__password reviewForm"
@@ -606,7 +631,11 @@ export default function MainLayout({ children }: { children: any }) {
                         password: e.target.value,
                       })
                     }
+                    isInvalid={errors.password?.length > 0}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.password !== undefined && errors.password[0]}
+                  </Form.Control.Feedback>
                   <button
                     type="button"
                     onClick={() => setInputType(!inputType)}
