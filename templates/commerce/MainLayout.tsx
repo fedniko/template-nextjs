@@ -44,13 +44,13 @@ export default function MainLayout({ children }: { children: any }) {
   const userState = useSelector((state: IRootState) => state.user);
 
   const [credentials, setCredentials] = useState({
-    username: '',
+    name: '',
     email: '',
     password: '',
   });
 
   const clearInputs = () =>
-    setCredentials({ username: '', email: '', password: '' });
+    setCredentials({ name: '', email: '', password: '' });
 
   function loginRequest() {
     API.post('auth/login', credentials)
@@ -66,8 +66,8 @@ export default function MainLayout({ children }: { children: any }) {
   function registerRequest() {
     API.post('auth/register', credentials)
       .then(() => {
-        handleLoginClose();
-        handleSignUpShow();
+        handleSignUpClose();
+        handleLoginShow();
       })
       .catch((error) => {
         console.error('registerRequest:', error);
@@ -566,11 +566,11 @@ export default function MainLayout({ children }: { children: any }) {
                   <Form.Control
                     type="text"
                     placeholder="ex: Julie"
-                    value={credentials.username}
+                    value={credentials.name}
                     onChange={(e) =>
                       setCredentials({
                         ...credentials,
-                        username: e.target.value,
+                        name: e.target.value,
                       })
                     }
                   />

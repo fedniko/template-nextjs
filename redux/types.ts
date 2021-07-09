@@ -3,11 +3,10 @@ export interface IUserState {
   userName: string;
   token: string;
 }
-export interface ISecondReducer {
-  id: number;
-  name: string;
+export interface IAppReducer {
+  isLoading: boolean;
 }
 export interface IRootState {
   user: IUserState;
-  second: ISecondReducer[];
+  app: IAppReducer;
 }
