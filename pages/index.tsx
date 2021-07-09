@@ -32,12 +32,18 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <Container
-        className="d-flex align-items-center justify-content-center"
-        style={{ height: '100vh' }}
-      >
-        <Spinner variant="primary" animation="border" role="status" />
-      </Container>
+      <>
+        <Head>
+          <title>Create Next App</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Container
+          className="d-flex align-items-center justify-content-center"
+          style={{ height: '100vh' }}
+        >
+          <Spinner variant="primary" animation="border" role="status" />
+        </Container>
+      </>
     );
   }
 
