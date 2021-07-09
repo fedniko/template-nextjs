@@ -28,7 +28,7 @@ export function GetUser() {
   }
   console.log('XSRF DOENST EXIST');
   return axios
-    .all([API().get('auth/user'), API().get(`auth/csrf-cookie`)])
+    .all([API().get(`auth/csrf-cookie`), API().get('auth/user')])
     .then();
 }
 
