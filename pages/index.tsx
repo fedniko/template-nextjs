@@ -1,16 +1,15 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import MainLayout from '../templates/commerce/MainLayout';
-import ItemList from '../templates/commerce/itemList/ItemList';
-import MainCarousel from '../templates/commerce/itemList/MainCarousel';
-import ItemCarousel from '../templates/commerce/itemList/ItemCarousel';
-import PopularCategories from '../templates/commerce/itemList/PopularCategories';
-import Partners from '../templates/commerce/itemList/Partners';
-import NewsLetter from '../templates/commerce/itemList/NewsLetter';
-import MainBanners from '../templates/commerce/itemList/MainBanners';
+import ProductList from '../templates/commerce/homePage/ProductList';
+import MainCarousel from '../templates/commerce/homePage/MainCarousel';
+import ProductListCarousel from '../templates/commerce/homePage/ProductListCarousel';
+import PopularCategories from '../templates/commerce/homePage/PopularCategories';
+import Partners from '../templates/commerce/homePage/Partners';
+import NewsLetter from '../templates/commerce/homePage/NewsLetter';
+import MainBanners from '../templates/commerce/homePage/MainBanners';
 
 export default function Home() {
-  const [cart, setCart] = useState([] as any);
   const [products] = useState([
     {
       id: 1,
@@ -69,20 +68,17 @@ export default function Home() {
       colors: ['#0F1214', '#F5222D', '#FAAD14', '#71767C', '#52C41A'],
     },
   ]);
-  const addToCart = (product: any) => {
-    setCart([...cart, product]);
-  };
   return (
     <MainLayout>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MainCarousel />
-      <ItemList products={products} addToCart={addToCart} />
+      <MainCarousel products={products} />
+      <ProductList products={products} />
       <MainBanners />
       <NewsLetter />
-      <ItemCarousel />
+      <ProductListCarousel products={products} />
       <PopularCategories />
       <Partners />
     </MainLayout>

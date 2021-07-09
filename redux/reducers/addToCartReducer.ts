@@ -1,16 +1,15 @@
 import { AnyAction } from 'redux';
 import { IAddToCartReducer } from '../types';
 
-const initialState: IAddToCartReducer = {
-  counter: 0,
-};
+const initialState: IAddToCartReducer[] = [];
 
 const addToCartReducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
-    case 'CART_INCREMENT':
-      return { ...state, counter: state.counter + 1 };
+    case 'CART_INCREMENT': {
+      return [...state, {}];
+    }
     case 'CART_DECREMENT':
-      return { ...state, counter: state.counter - 1 };
+      return [...state, {}];
     default:
       return state;
   }

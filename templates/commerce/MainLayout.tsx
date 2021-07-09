@@ -38,7 +38,7 @@ export default function MainLayout({ children }: { children: any }) {
   const handleLoginShow = () => setShowLogin(true);
   const handleSignUpShow = () => setShowSignUp(true);
 
-  const { counter } = useSelector((state: IRootState) => state.cart);
+  const addToCartReducers = useSelector((state: IRootState) => state.cart);
 
   return (
     <>
@@ -135,7 +135,7 @@ export default function MainLayout({ children }: { children: any }) {
               <Link href="/cart">
                 <a className="text header__text">
                   <img src="/commerce_img/cart.svg" alt="cart" />
-                  <span>{counter}</span>
+                  <span>{addToCartReducers.length}</span>
                 </a>
               </Link>
               <a
