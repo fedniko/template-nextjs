@@ -4,11 +4,11 @@ $secondary_darkest: #DE5212;
 $secondary_darker: #E9672B;
 $secondary_lightest: #FBF8F5;
 
-.itemList {
+.productList {
   margin-bottom: 100px;
 }
 
-.itemList__item {
+.productList__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,36 +18,36 @@ $secondary_lightest: #FBF8F5;
   //height: 296px;
 }
 
-.itemList__image {
+.productList__image {
   display: flex;
   justify-content: center;
   height: 65%;
   cursor: pointer;
 }
 
-.itemList__image_item {
+.productList__image_item {
   object-fit: contain;
   max-width: 100%;
 }
 
-.itemList__body {
+.productList__body {
   //padding-top: 30px;
 }
 
-.itemList__colors {
+.productList__colors {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 18px;
 }
 
-.itemList__colors button {
+.productList__colors button {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   border: none;
 }
 
-.itemList__heading {
+.productList__heading {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -56,11 +56,16 @@ $secondary_lightest: #FBF8F5;
   text-align: center;
 }
 
-.itemList__heading p {
+.productList__heading p {
   margin-bottom: 12px;
 }
 
-.itemList__price {
+.productList__price {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.productList__price__text {
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -70,7 +75,21 @@ $secondary_lightest: #FBF8F5;
   margin-bottom: 5px;
 }
 
-.itemList__item button {
+.productList__price__text.active {
+  color: #DA3E31;
+}
+
+.productList__price__text.old {
+  color: #B6B8B8;
+  font-weight: normal;
+  text-decoration-line: line-through;
+}
+
+.productList__price__text.null {
+  display: none;
+}
+
+.productList__item button {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -78,10 +97,10 @@ $secondary_lightest: #FBF8F5;
   color: $secondary_darkest;
 }
 
-.itemList__item button:hover {
+.productList__item button:hover {
   color: $neutral_darkest;
 }
 
-.itemList__item button:focus {
+.productList__item button:focus {
   box-shadow: 0 0 0 0.25rem rgb(222 82 18 / 25%);
 }

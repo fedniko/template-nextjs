@@ -135,7 +135,7 @@ export default function MainLayout({ children }: { children: any }) {
               <Link href="/cart">
                 <a className="text header__text">
                   <img src="/commerce_img/cart.svg" alt="cart" />
-                  <span>{addToCartReducers.length}</span>
+                  <span>{addToCartReducers?.length}</span>
                 </a>
               </Link>
               <a

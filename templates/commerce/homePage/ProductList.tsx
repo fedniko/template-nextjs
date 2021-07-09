@@ -3,7 +3,7 @@ import ProductItem from './ProductItem';
 
 export default function ProductList({ products }: any) {
   return (
-    <section className="itemList">
+    <section className="productList">
       <Container>
         <Row className="heading-div">
           <Col>
