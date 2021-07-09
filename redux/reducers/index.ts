@@ -1,11 +1,11 @@
 import { combineReducers, AnyAction } from 'redux';
 import { HYDRATE } from 'next-redux-wrapper';
-import firstReducer from './firstReducer';
+import userReducer from './userReducer';
 import secondReducer from './secondReducer';
 import { IRootState } from '../types';
 
 const rootReducer = combineReducers({
-  first: firstReducer,
+  user: userReducer,
   second: secondReducer,
 });
 

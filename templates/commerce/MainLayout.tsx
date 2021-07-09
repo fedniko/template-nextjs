@@ -11,6 +11,9 @@ import {
   Modal,
 } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { IRootState } from '../../redux/types';
+import API from '../../components/api';
 
 export default function MainLayout({ children }: { children: any }) {
   useEffect(() => {
@@ -27,6 +30,7 @@ export default function MainLayout({ children }: { children: any }) {
       }
     };
   });
+
   const [showLogin, setShowLogin] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
   const [inputType, setInputType] = useState(false);
@@ -35,6 +39,40 @@ export default function MainLayout({ children }: { children: any }) {
   const handleSignUpClose = () => setShowSignUp(false);
   const handleLoginShow = () => setShowLogin(true);
   const handleSignUpShow = () => setShowSignUp(true);
+
+  const dispatch = useDispatch();
+  const userState = useSelector((state: IRootState) => state.user);
+
+  const [credentials, setCredentials] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
+
+  const clearInputs = () =>
+    setCredentials({ username: '', email: '', password: '' });
+
+  function loginRequest() {
+    API.post('auth/login', credentials)
+      .then(({ data }) => {
+        dispatch({ type: 'LOG_IN', ...data });
+        handleLoginClose();
+      })
+      .catch((error) => {
+        console.error('loginRequest:', error);
+      });
+  }
+
+  function registerRequest() {
+    API.post('auth/register', credentials)
+      .then(() => {
+        handleLoginClose();
+        handleSignUpShow();
+      })
+      .catch((error) => {
+        console.error('registerRequest:', error);
+      });
+  }
 
   return (
     <>
@@ -142,7 +180,7 @@ export default function MainLayout({ children }: { children: any }) {
                   src="/commerce_img/signin.svg"
                   alt="signIn"
                 />
-                Sign in
+                {userState.isLogged ? userState.userName : 'Sign In'}
               </a>
             </Col>
           </Row>
@@ -342,6 +380,7 @@ export default function MainLayout({ children }: { children: any }) {
       <Modal
         show={showLogin}
         onHide={handleLoginClose}
+        onExited={clearInputs}
         className="authModal"
         centered
       >
@@ -399,7 +438,14 @@ export default function MainLayout({ children }: { children: any }) {
                   <Form.Label>Your email</Form.Label>
                   <Form.Control
                     type="email"
+                    value={credentials.email}
                     placeholder="ex: julie@gmail.com"
+                    onChange={(e) =>
+                      setCredentials({
+                        ...credentials,
+                        email: e.target.value,
+                      })
+                    }
                   />
                 </Form.Group>
                 <Form.Group
@@ -407,7 +453,16 @@ export default function MainLayout({ children }: { children: any }) {
                   controlId="formPassword"
                 >
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type={inputType ? 'input' : 'password'} />
+                  <Form.Control
+                    type={inputType ? 'input' : 'password'}
+                    value={credentials.password}
+                    onChange={(e) =>
+                      setCredentials({
+                        ...credentials,
+                        password: e.target.value,
+                      })
+                    }
+                  />
                   <button
                     type="button"
                     onClick={() => setInputType(!inputType)}
@@ -426,6 +481,7 @@ export default function MainLayout({ children }: { children: any }) {
                   className="authModal__right__form__submit"
                   variant="primary"
                   size="lg"
+                  onClick={() => loginRequest()}
                 >
                   Sign In
                 </Button>
@@ -448,6 +504,7 @@ export default function MainLayout({ children }: { children: any }) {
       <Modal
         show={showSignUp}
         onHide={handleSignUpClose}
+        onExited={clearInputs}
         className="authModal"
         centered
       >
@@ -506,7 +563,17 @@ export default function MainLayout({ children }: { children: any }) {
                   controlId="formEmail"
                 >
                   <Form.Label>Username</Form.Label>
-                  <Form.Control type="text" placeholder="ex: Julie" />
+                  <Form.Control
+                    type="text"
+                    placeholder="ex: Julie"
+                    value={credentials.username}
+                    onChange={(e) =>
+                      setCredentials({
+                        ...credentials,
+                        username: e.target.value,
+                      })
+                    }
+                  />
                 </Form.Group>
                 <Form.Group
                   className="authModal__right__form__email reviewForm"
@@ -516,6 +583,13 @@ export default function MainLayout({ children }: { children: any }) {
                   <Form.Control
                     type="email"
                     placeholder="ex: julie@gmail.com"
+                    value={credentials.email}
+                    onChange={(e) =>
+                      setCredentials({
+                        ...credentials,
+                        email: e.target.value,
+                      })
+                    }
                   />
                 </Form.Group>
                 <Form.Group
@@ -523,7 +597,16 @@ export default function MainLayout({ children }: { children: any }) {
                   controlId="formPassword"
                 >
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type={inputType ? 'input' : 'password'} />
+                  <Form.Control
+                    type={inputType ? 'input' : 'password'}
+                    value={credentials.password}
+                    onChange={(e) =>
+                      setCredentials({
+                        ...credentials,
+                        password: e.target.value,
+                      })
+                    }
+                  />
                   <button
                     type="button"
                     onClick={() => setInputType(!inputType)}
@@ -552,6 +635,7 @@ Conditions"
                   className="authModal__right__form__submit"
                   variant="primary"
                   size="lg"
+                  onClick={() => registerRequest()}
                 >
                   Create Account
                 </Button>
