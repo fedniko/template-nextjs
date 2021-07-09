@@ -12,7 +12,7 @@ function API() {
   });
 }
 
-export function GetUser() {
+export async function GetUser() {
   const isXSRF = document.cookie
     .split('; ')
     .map((c) => {
@@ -25,9 +25,10 @@ export function GetUser() {
   if (isXSRF) {
     return API().get('auth/user').then();
   }
-  return axios
-    .all([API().get(`auth/csrf-cookie`), API().get('auth/user')])
-    .then();
+  return Promise.all([
+    await API().get(`auth/csrf-cookie`),
+    await API().get('auth/user'),
+  ]).then();
 }
 
 export default API();
