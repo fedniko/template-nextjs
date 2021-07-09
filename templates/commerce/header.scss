@@ -25,6 +25,24 @@ $secondary_lightest: #FBF8F5;
   color: $neutral_darker;
   display: flex;
   align-items: center;
+  img {
+    margin-right: 10px;
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 23px;
+    background: $secondary_darkest;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+  }
 }
 
 .header__top {

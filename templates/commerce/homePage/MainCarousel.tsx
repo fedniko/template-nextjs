@@ -1,52 +1,9 @@
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import Slider from 'react-slick';
 // eslint-disable-next-line no-use-before-define
-import React, { useState } from 'react';
+import React from 'react';
 
-export default function MainCarousel() {
-  const [products] = useState([
-    {
-      id: 1,
-      name: 'Bucklo Wrop Wooden Table',
-      picture: '/commerce_img/item1.png',
-    },
-    {
-      id: 2,
-      name: 'Bucklo Wrop Wooden Table',
-      picture: '/commerce_img/item2.png',
-    },
-    {
-      id: 3,
-      name: 'Bucklo Wrop Wooden Table',
-      picture: '/commerce_img/item3.png',
-    },
-    {
-      id: 4,
-      name: 'Bucklo Wrop Wooden Table',
-      picture: '/commerce_img/item4.png',
-    },
-    {
-      id: 5,
-      name: 'Bucklo Wrop Wooden Table',
-      picture: '/commerce_img/item5.png',
-    },
-    {
-      id: 6,
-      name: 'Bucklo Wrop Wooden Table',
-      picture: '/commerce_img/item6.png',
-    },
-    {
-      id: 7,
-      name: 'Bucklo Wrop Wooden Table',
-      picture: '/commerce_img/item7.png',
-    },
-    {
-      id: 8,
-      name: 'Bucklo Wrop Wooden Table',
-      picture: '/commerce_img/item8.png',
-    },
-  ]);
-
+export default function MainCarousel({ products }: any) {
   const settings = {
     dots: true,
     arrows: false,
@@ -74,7 +31,7 @@ export default function MainCarousel() {
   return (
     <section className="main__carousel">
       <Slider {...settings}>
-        {products.map((product) => (
+        {products.map((product: any) => (
           <React.Fragment key={product.id}>
             <Container className="main__carousel__container">
               <Row className="align-items-center">

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import MainLayout from '../../templates/commerce/MainLayout';
 import WishlistMain from '../../templates/commerce/wishlist/Wishlist';
-import ItemCarousel from '../../templates/commerce/itemList/ItemCarousel';
+import ProductListCarousel from '../../templates/commerce/homePage/ProductListCarousel';
 
 export default function Wishlist() {
   return (
@@ -11,7 +11,7 @@ export default function Wishlist() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <WishlistMain />
-      <ItemCarousel />
+      <ProductListCarousel />
     </MainLayout>
   );
 }
