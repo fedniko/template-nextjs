@@ -23,10 +23,8 @@ export function GetUser() {
     .some((c) => c.key === 'XSRF-TOKEN');
 
   if (isXSRF) {
-    console.log('XSRF EXIST');
     return API().get('auth/user').then();
   }
-  console.log('XSRF DOENST EXIST');
   return axios
     .all([API().get(`auth/csrf-cookie`), API().get('auth/user')])
     .then();

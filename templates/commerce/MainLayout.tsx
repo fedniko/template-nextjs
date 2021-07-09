@@ -433,7 +433,7 @@ export default function MainLayout({ children }: { children: any }) {
               <div className="authModal__right__form">
                 <Form.Group
                   className="authModal__right__form__email reviewForm"
-                  controlId="formEmail"
+                  controlId="formLoginEmail"
                 >
                   <Form.Label>Your email</Form.Label>
                   <Form.Control
@@ -560,7 +560,7 @@ export default function MainLayout({ children }: { children: any }) {
               <div className="authModal__right__form">
                 <Form.Group
                   className="authModal__right__form__username reviewForm"
-                  controlId="formEmail"
+                  controlId="formUsername"
                 >
                   <Form.Label>Username</Form.Label>
                   <Form.Control
@@ -577,7 +577,7 @@ export default function MainLayout({ children }: { children: any }) {
                 </Form.Group>
                 <Form.Group
                   className="authModal__right__form__email reviewForm"
-                  controlId="formEmail"
+                  controlId="formRegisterEmail"
                 >
                   <Form.Label>Your email</Form.Label>
                   <Form.Control
