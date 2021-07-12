@@ -23,12 +23,12 @@ export async function GetUser() {
     .some((c) => c.key === 'XSRF-TOKEN');
 
   if (isXSRF) {
-    return API().get('auth/user').then();
+    return API().get('auth/user');
   }
   return Promise.all([
     await API().get(`auth/csrf-cookie`),
     await API().get('auth/user'),
-  ]).then();
+  ]);
 }
 
 export default API();
