@@ -1,5 +1,9 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { Container, Spinner } from 'react-bootstrap';
+import { GetUser } from '../components/api';
+import { IRootState } from '../redux/types';
 import MainLayout from '../templates/commerce/MainLayout';
 import ProductList from '../templates/commerce/homePage/ProductList';
 import MainCarousel from '../templates/commerce/homePage/MainCarousel';
@@ -10,6 +14,9 @@ import NewsLetter from '../templates/commerce/homePage/NewsLetter';
 import MainBanners from '../templates/commerce/homePage/MainBanners';
 
 export default function Home() {
+  const { isLoading } = useSelector((state: IRootState) => state.app);
+  const dispatch = useDispatch();
+
   const [products] = useState([
     {
       id: 1,
@@ -71,6 +78,37 @@ export default function Home() {
       colors: ['#0F1214', '#F5222D', '#FAAD14', '#71767C', '#52C41A'],
     },
   ]);
+
+  useEffect(() => {
+    GetUser()
+      .then(({ data }: any) => {
+        dispatch({ type: 'LOADING_OFF' });
+        dispatch({ type: 'LOG_IN', ...data });
+      })
+      .catch((error: any) => {
+        dispatch({ type: 'LOADING_OFF' });
+        console.error('GetUser()', error);
+      });
+    // eslint-disable-next-line
+  }, []);
+
+  if (isLoading) {
+    return (
+      <>
+        <Head>
+          <title>Create Next App</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Container
+          className="d-flex align-items-center justify-content-center"
+          style={{ height: '100vh' }}
+        >
+          <Spinner variant="primary" animation="border" role="status" />
+        </Container>
+      </>
+    );
+  }
+
   return (
     <MainLayout>
       <Head>

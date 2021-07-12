@@ -1,13 +1,13 @@
 import { combineReducers, AnyAction } from 'redux';
 import { HYDRATE } from 'next-redux-wrapper';
-import firstReducer from './firstReducer';
-import secondReducer from './secondReducer';
+import userReducer from './userReducer';
+import appReducer from './appReducer';
 import { IRootState } from '../types';
 import addToCartReducer from './addToCartReducer';
 
 const rootReducer = combineReducers({
-  first: firstReducer,
-  second: secondReducer,
+  user: userReducer,
+  app: appReducer,
   cart: addToCartReducer,
 });
 

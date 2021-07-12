@@ -27,6 +27,7 @@
         "prettier"
     ],
     "rules": {
+        "no-console": "off",
         "react/react-in-jsx-scope": "off",
         "prettier/prettier": ["error"],
         "react/jsx-filename-extension": [2, { "extensions": [

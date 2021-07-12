@@ -54,7 +54,7 @@ export default function Cart() {
               <Col xs="3" />
             </Row>
             {items.map((item) => (
-              <Row className="wishlist__itemsRow">
+              <Row className="wishlist__itemsRow" key={item.name}>
                 <Col className="wishlist__itemsRow__delete" xs="1">
                   <button
                     onClick={() => deleteItem(item.id)}

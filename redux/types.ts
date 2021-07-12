@@ -1,16 +1,15 @@
-export interface IFirstReducer {
-  counter: number;
+export interface IUserState {
+  isLogged: boolean;
+  userName: string;
+  token: string;
 }
-
-export interface ISecondReducer {
-  id: number;
-  name: string;
+export interface IAppReducer {
+  isLoading: boolean;
 }
 
 export interface IAddToCartReducer {}
-
 export interface IRootState {
-  first: IFirstReducer;
-  second: ISecondReducer[];
+  user: IUserState;
+  app: IAppReducer;
   cart: IAddToCartReducer[];
 }

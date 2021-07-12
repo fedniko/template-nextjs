@@ -11,8 +11,9 @@ import {
   Modal,
 } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { IRootState } from '../../redux/types';
+import API from '../../components/api';
 
 export default function MainLayout({ children }: { children: any }) {
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function MainLayout({ children }: { children: any }) {
       }
     };
   });
+
   const [showLogin, setShowLogin] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
   const [inputType, setInputType] = useState(false);
@@ -37,6 +39,49 @@ export default function MainLayout({ children }: { children: any }) {
   const handleSignUpClose = () => setShowSignUp(false);
   const handleLoginShow = () => setShowLogin(true);
   const handleSignUpShow = () => setShowSignUp(true);
+
+  const dispatch = useDispatch();
+  const userState = useSelector((state: IRootState) => state.user);
+
+  const [credentials, setCredentials] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+
+  const [errors, setErrors] = useState<any>({});
+
+  const clearInputs = () => {
+    setErrors({});
+    setCredentials({ name: '', email: '', password: '' });
+  };
+
+  function loginRequest() {
+    setErrors({});
+    API.post('auth/login', credentials)
+      .then(({ data }) => {
+        dispatch({ type: 'LOG_IN', ...data });
+        handleLoginClose();
+      })
+      .catch((error) => {
+        console.log('error: ', error);
+        setErrors(error?.response.data.errors);
+        console.error('loginRequest:', error);
+      });
+  }
+
+  function registerRequest() {
+    setErrors({});
+    API.post('auth/register', credentials)
+      .then(() => {
+        handleSignUpClose();
+        handleLoginShow();
+      })
+      .catch((error) => {
+        setErrors(error?.response.data.errors);
+        console.error('registerRequest:', error);
+      });
+  }
 
   const addToCartReducers = useSelector((state: IRootState) => state.cart);
 
@@ -147,7 +192,7 @@ export default function MainLayout({ children }: { children: any }) {
                   src="/commerce_img/signin.svg"
                   alt="signIn"
                 />
-                Sign in
+                {userState.isLogged ? userState.userName : 'Sign In'}
               </a>
             </Col>
           </Row>
@@ -347,6 +392,7 @@ export default function MainLayout({ children }: { children: any }) {
       <Modal
         show={showLogin}
         onHide={handleLoginClose}
+        onExited={clearInputs}
         className="authModal"
         centered
       >
@@ -399,20 +445,44 @@ export default function MainLayout({ children }: { children: any }) {
               <div className="authModal__right__form">
                 <Form.Group
                   className="authModal__right__form__email reviewForm"
-                  controlId="formEmail"
+                  controlId="formLoginEmail"
                 >
                   <Form.Label>Your email</Form.Label>
                   <Form.Control
                     type="email"
+                    value={credentials.email}
                     placeholder="ex: julie@gmail.com"
+                    onChange={(e) =>
+                      setCredentials({
+                        ...credentials,
+                        email: e.target.value,
+                      })
+                    }
+                    isInvalid={errors.email?.length > 0}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.email !== undefined && errors.email[0]}
+                  </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group
                   className="authModal__right__form__password reviewForm"
                   controlId="formPassword"
                 >
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type={inputType ? 'input' : 'password'} />
+                  <Form.Control
+                    type={inputType ? 'input' : 'password'}
+                    value={credentials.password}
+                    onChange={(e) =>
+                      setCredentials({
+                        ...credentials,
+                        password: e.target.value,
+                      })
+                    }
+                    isInvalid={errors.password?.length > 0}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.password !== undefined && errors.password[0]}
+                  </Form.Control.Feedback>
                   <button
                     type="button"
                     onClick={() => setInputType(!inputType)}
@@ -431,6 +501,7 @@ export default function MainLayout({ children }: { children: any }) {
                   className="authModal__right__form__submit"
                   variant="primary"
                   size="lg"
+                  onClick={() => loginRequest()}
                 >
                   Sign In
                 </Button>
@@ -453,6 +524,7 @@ export default function MainLayout({ children }: { children: any }) {
       <Modal
         show={showSignUp}
         onHide={handleSignUpClose}
+        onExited={clearInputs}
         className="authModal"
         centered
       >
@@ -508,27 +580,65 @@ export default function MainLayout({ children }: { children: any }) {
               <div className="authModal__right__form">
                 <Form.Group
                   className="authModal__right__form__username reviewForm"
-                  controlId="formEmail"
+                  controlId="formUsername"
                 >
                   <Form.Label>Username</Form.Label>
-                  <Form.Control type="text" placeholder="ex: Julie" />
+                  <Form.Control
+                    type="text"
+                    placeholder="ex: Julie"
+                    value={credentials.name}
+                    onChange={(e) =>
+                      setCredentials({
+                        ...credentials,
+                        name: e.target.value,
+                      })
+                    }
+                    isInvalid={errors.name?.length > 0}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.name !== undefined && errors.name[0]}
+                  </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group
                   className="authModal__right__form__email reviewForm"
-                  controlId="formEmail"
+                  controlId="formRegisterEmail"
                 >
                   <Form.Label>Your email</Form.Label>
                   <Form.Control
                     type="email"
                     placeholder="ex: julie@gmail.com"
+                    value={credentials.email}
+                    onChange={(e) =>
+                      setCredentials({
+                        ...credentials,
+                        email: e.target.value,
+                      })
+                    }
+                    isInvalid={errors.email?.length > 0}
                   />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.email !== undefined && errors.email[0]}
+                  </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group
                   className="authModal__right__form__password reviewForm"
                   controlId="formPassword"
                 >
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type={inputType ? 'input' : 'password'} />
+                  <Form.Control
+                    type={inputType ? 'input' : 'password'}
+                    value={credentials.password}
+                    onChange={(e) =>
+                      setCredentials({
+                        ...credentials,
+                        password: e.target.value,
+                      })
+                    }
+                    isInvalid={errors.password?.length > 0}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.password !== undefined && errors.password[0]}
+                  </Form.Control.Feedback>
                   <button
                     type="button"
                     onClick={() => setInputType(!inputType)}
@@ -557,6 +667,7 @@ Conditions"
                   className="authModal__right__form__submit"
                   variant="primary"
                   size="lg"
+                  onClick={() => registerRequest()}
                 >
                   Create Account
                 </Button>
