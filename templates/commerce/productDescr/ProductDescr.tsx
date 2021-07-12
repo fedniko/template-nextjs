@@ -1,14 +1,25 @@
 import { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 export default function ProductDescr() {
-  const [previews, setPreviews] = useState({
-    images: [
+  const [params, setParams] = useState({
+    quantity: 1,
+    previews: [
       'commerce_img/products/product-img1.png',
       'commerce_img/products/product-img2.png',
       'commerce_img/products/product-img3.png',
     ],
-    isSelect: 0,
+    selectedPreview: 0,
+    colors: [
+      'commerce_img/colors/1.png',
+      'commerce_img/colors/2.png',
+      'commerce_img/colors/3.png',
+      'commerce_img/colors/4.png',
+      'commerce_img/colors/5.png',
+    ],
+    selectedColor: 0,
+    dimensions: ['40x60 cm', '60x80 cm', '80x120 cm'],
+    selectedDimension: 0,
   });
 
   return (
@@ -17,17 +28,16 @@ export default function ProductDescr() {
         <Row className="align-items-center">
           <Col md="4" xs="12" className="productDescr__imgBlock d-flex">
             <div className="productDescr__imgBlock__left">
-              {previews.images.map((src, index) => (
-                // eslint-disable-next-line
+              {params.previews.map((src, index) => (
                 <img
                   key={src}
                   src={src}
                   alt="product-img"
-                  className={previews.isSelect === index ? 'selected' : ''}
+                  className={params.selectedPreview === index ? 'selected' : ''}
                   onClick={() =>
-                    setPreviews({
-                      ...previews,
-                      isSelect: index,
+                    setParams({
+                      ...params,
+                      selectedPreview: index,
                     })
                   }
                 />
@@ -35,7 +45,7 @@ export default function ProductDescr() {
             </div>
             <div className="productDescr__imgBlock__right">
               <img
-                src={previews.images[previews.isSelect]}
+                src={params.previews[params.selectedPreview]}
                 alt="product-img1"
               />
             </div>
@@ -63,23 +73,41 @@ export default function ProductDescr() {
             <div className="productDescr__descrBlock__colors">
               <p>Color</p>
               <div>
-                <img
-                  className="active"
-                  src="commerce_img/colors/1.png"
-                  alt="colors1"
-                />
-                <img src="commerce_img/colors/2.png" alt="colors2" />
-                <img src="commerce_img/colors/3.png" alt="colors3" />
-                <img src="commerce_img/colors/4.png" alt="colors4" />
-                <img src="commerce_img/colors/5.png" alt="colors5" />
+                {params.colors.map((color, index) => (
+                  <img
+                    className={params.selectedColor === index ? 'active' : ''}
+                    key={color}
+                    src={color}
+                    alt="color preview"
+                    onClick={() =>
+                      setParams({
+                        ...params,
+                        selectedColor: index,
+                      })
+                    }
+                  />
+                ))}
               </div>
             </div>
             <div className="productDescr__descrBlock__dimension">
               <p>Dimension</p>
               <ul>
-                <li className="pro active">40x60 cm</li>
-                <li className="pro">60x80 cm</li>
-                <li className="pro">80x120 cm</li>
+                {params.dimensions.map((dim, index) => (
+                  <li
+                    className={
+                      params.selectedDimension === index ? 'pro active' : 'pro'
+                    }
+                    key={dim}
+                    onClick={() =>
+                      setParams({
+                        ...params,
+                        selectedDimension: index,
+                      })
+                    }
+                  >
+                    {dim}
+                  </li>
+                ))}
               </ul>
             </div>
           </Col>
@@ -87,9 +115,27 @@ export default function ProductDescr() {
             <div className="productDescr__priceBlock__quantity">
               <p>Quantity</p>
               <div>
-                <img src="commerce_img/icon_minus.svg" alt="icon_minus" />
-                <p>01</p>
-                <img src="commerce_img/icon_plus.svg" alt="icon_plus" />
+                <img
+                  className={params.quantity === 0 ? 'disabled' : ''}
+                  src="commerce_img/icon_minus.svg"
+                  alt="icon_minus"
+                  onClick={() => {
+                    if (params.quantity !== 0) {
+                      setParams({ ...params, quantity: params.quantity - 1 });
+                    }
+                  }}
+                />
+                <p>{params.quantity}</p>
+                <img
+                  className={params.quantity === 10 ? 'disabled' : ''}
+                  src="commerce_img/icon_plus.svg"
+                  alt="icon_plus"
+                  onClick={() => {
+                    if (params.quantity < 10) {
+                      setParams({ ...params, quantity: params.quantity + 1 });
+                    }
+                  }}
+                />
               </div>
             </div>
             <div className="productDescr__priceBlock__price">
@@ -98,12 +144,12 @@ export default function ProductDescr() {
               <p className="productDescr__priceBlock__price__discount">-30%</p>
             </div>
             <div className="productDescr__priceBlock__cartButton">
-              <button
+              <Button
                 type="button"
-                className="productDescr__priceBlock__cartButton__addToCartButton"
+                className="button productDescr__priceBlock__cartButton__addToCartButton"
               >
                 Add to Cart
-              </button>
+              </Button>
               <button
                 type="button"
                 className="productDescr__priceBlock__cartButton__addToFavoriteButton"
@@ -111,12 +157,12 @@ export default function ProductDescr() {
                 <img src="commerce_img/icon_heart.svg" alt="icon_heart" />
               </button>
             </div>
-            <button
+            <Button
               type="button"
               className="button_black productDescr__priceBlock__buyButton"
             >
               Buy It Now!
-            </button>
+            </Button>
             <div className="productDescr__priceBlock__wishlist">
               <img src="commerce_img/bags.png" alt="bags" />
               <p>
