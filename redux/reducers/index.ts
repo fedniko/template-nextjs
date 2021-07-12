@@ -3,10 +3,12 @@ import { HYDRATE } from 'next-redux-wrapper';
 import userReducer from './userReducer';
 import appReducer from './appReducer';
 import { IRootState } from '../types';
+import addToCartReducer from './addToCartReducer';
 
 const rootReducer = combineReducers({
   user: userReducer,
   app: appReducer,
+  cart: addToCartReducer,
 });
 
 export const reducer = (state: IRootState | undefined, action: AnyAction) => {

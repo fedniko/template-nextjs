@@ -25,6 +25,24 @@ $secondary_lightest: #FBF8F5;
   color: $neutral_darker;
   display: flex;
   align-items: center;
+  img {
+    margin-right: 10px;
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 23px;
+    background: $secondary_darkest;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+  }
 }
 
 .header__top {
@@ -100,13 +118,16 @@ $secondary_lightest: #FBF8F5;
     background: #F4F4F5;
     border-radius: 40px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
     input {
       background-color:transparent;
       border:0;
       height: 48px;
       padding: 14px 12px 14px 24px;
       color: $neutral_darker;
+      width: 80%;
     }
     input:focus {
       outline: none;

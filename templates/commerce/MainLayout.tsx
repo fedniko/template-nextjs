@@ -83,6 +83,8 @@ export default function MainLayout({ children }: { children: any }) {
       });
   }
 
+  const addToCartReducers = useSelector((state: IRootState) => state.cart);
+
   return (
     <>
       <header className="header">
@@ -178,6 +180,7 @@ export default function MainLayout({ children }: { children: any }) {
               <Link href="/cart">
                 <a className="text header__text">
                   <img src="/commerce_img/cart.svg" alt="cart" />
+                  <span>{addToCartReducers?.length}</span>
                 </a>
               </Link>
               <a
@@ -203,7 +206,7 @@ export default function MainLayout({ children }: { children: any }) {
                 <Link href="/">
                   <a className="nav-link active text">Home</a>
                 </Link>
-                <Link href="/">
+                <Link href="/shop">
                   <a className="nav-link text">Shop</a>
                 </Link>
                 <Link href="/blog">

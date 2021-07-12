@@ -6,7 +6,10 @@ export interface IUserState {
 export interface IAppReducer {
   isLoading: boolean;
 }
+
+export interface IAddToCartReducer {}
 export interface IRootState {
   user: IUserState;
   app: IAppReducer;
+  cart: IAddToCartReducer[];
 }

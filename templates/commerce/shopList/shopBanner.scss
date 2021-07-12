@@ -1,0 +1,36 @@
+.shopBanner {
+  margin-bottom: 40px;
+  background-image: url(/commerce_img/shop_banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &__body {
+    padding-top: 100px;
+    padding-bottom: 167px;
+    text-align: center;
+    h5 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      color: #5D5F5F;
+    }
+    h1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 44px;
+      line-height: 72px;
+      letter-spacing: -0.01em;
+      color: #1D1F1F;
+    }
+    h3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 27px;
+      letter-spacing: 0.04em;
+      color: #5D5F5F;
+    }
+  }
+}

@@ -115,7 +115,7 @@ export default function ProductReview() {
                 {reviews.map((review, index) => (
                   <ReviewCard review={review} key={review.name} index={index} />
                 ))}
-                <Pagination className="productReview__reviewBlock__main__reviews__pagination">
+                <Pagination>
                   <Pagination.Prev>Pre</Pagination.Prev>
                   <Pagination.Item active>{1}</Pagination.Item>
                   <Pagination.Item>{2}</Pagination.Item>
