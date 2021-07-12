@@ -1,6 +1,11 @@
 import { Form } from 'react-bootstrap';
 import Link from 'next/link';
 import { useState } from 'react';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
+
+const { createSliderWithTooltip } = Slider;
+const Range = createSliderWithTooltip(Slider.Range);
 
 export default function ShopFilter() {
   const [active, setActive] = useState(true);
@@ -221,7 +226,15 @@ export default function ShopFilter() {
               : 'shopFilter__price shopFilter__accordion-item__content'
           }
         >
-          <Form.Range />
+          <div className="shopFilter__price__range">
+            <Range
+              min={0}
+              max={8000}
+              defaultValue={[0, 4000]}
+              marks={{ 0: '$0', 4000: '$4000', 8000: '$8000' }}
+              tipFormatter={(value) => `$${value}`}
+            />
+          </div>
         </div>
       </div>
     </section>
