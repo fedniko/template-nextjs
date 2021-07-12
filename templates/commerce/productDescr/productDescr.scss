@@ -52,6 +52,7 @@
         padding: 2px;
         border: 1px solid transparent;
         border-radius: 50%;
+        cursor: pointer;
       }
       img.active {
         padding: 2px;
@@ -71,6 +72,7 @@
         display: flex;
         list-style-type: none;
         li {
+          cursor: pointer;
           height: 48px;
           font-size: 14px;
           border: 1px solid #BABABA;
@@ -136,11 +138,6 @@
       &__addToCartButton {
         width: 296px;
         height: 48px;
-        background: #DE5212;
-        border-radius: 40px;
-        border: none;
-        color: white;
-        font-size: 14px;
       }
       &__addToFavoriteButton {
         width: 48px;
@@ -148,6 +145,14 @@
         border-radius: 50%;
         background: transparent;
         border: 1px solid #E3E3E3;
+        transition: all 0.2s ease-in;
+        &:focus {
+          background: #DE5212;
+          img {
+            transition: all 0.2s ease-in;
+            filter: invert(100%);
+          }
+        }
       }
     }
     &__buyButton {
@@ -172,6 +177,10 @@
 
 .grey {
   color: #5D5F5F;
+}
+
+.disabled {
+  opacity: 0.5;
 }
 
 .divider {
