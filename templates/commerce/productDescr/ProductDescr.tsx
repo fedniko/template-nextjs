@@ -113,7 +113,7 @@ export default function ProductDescr() {
             </div>
             <button
               type="button"
-              className="productDescr__priceBlock__buyButton"
+              className="button_black productDescr__priceBlock__buyButton"
             >
               Buy It Now!
             </button>

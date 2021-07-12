@@ -56,7 +56,7 @@ export default function ContactMain() {
                 />
               </Form.Group>
               <div className="contactMain__form__button">
-                <Button variant="dark" type="submit" className="button">
+                <Button variant="dark" type="submit" className="button_black">
                   Submit
                 </Button>
               </div>

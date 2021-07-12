@@ -165,7 +165,10 @@ export default function Cart() {
               <p>Total</p>
               <p>$94.14</p>
             </div>
-            <Button type="submit" className="button cart__summary__checkout">
+            <Button
+              type="submit"
+              className="button_black cart__summary__checkout"
+            >
               Proceed to Checkout
             </Button>
             <div className="cart__summary__pay_icons">

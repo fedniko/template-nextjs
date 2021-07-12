@@ -184,7 +184,9 @@ export default function ProductReview() {
                   />
                 </Form.Group>
                 <div className="productReview__reviewBlock__main__reviewForm__submit reviewForm">
-                  <Button type="button">Submit</Button>
+                  <Button type="button" className="button_black">
+                    Submit
+                  </Button>
                 </div>
               </Col>
             </div>

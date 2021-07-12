@@ -82,6 +82,28 @@ p, h1, h2, h3, h4, h5 {
   line-height: 20px;
 }
 
+.button_black {
+  border-radius: 40px;
+  height: 48px;
+  padding: 14px 55px;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  background: #1D1F1F;
+  border: none;
+  &:hover, &:active {
+    background: #5D5F5F;
+    color: #FFFFFF;
+  }
+  &:focus {
+    background: #5D5F5F;
+    box-shadow: 0 0 0 0.25rem #B6B8B8;
+    color: #FFFFFF;
+  }
+}
+
 .button_outline {
   border: 1px solid $secondary_darkest;
   box-sizing: border-box;
