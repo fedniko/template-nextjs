@@ -15,6 +15,17 @@ export default function ProductItem({ p }: any) {
             alt="news3"
           />
         </Link>
+
+        <span
+          className={
+            p.old_price != null
+              ? 'productList__image__sale'
+              : 'productList__image__sale notSale'
+          }
+        >
+          {p.old_price != null &&
+            `-${Math.round((1 - p.price / p.old_price) * 100)}%`}
+        </span>
       </div>
       <div className="productList__body">
         <div className="productList__colors">
