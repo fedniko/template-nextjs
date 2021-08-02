@@ -132,3 +132,132 @@ $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-900;
 ```
+
+### Настройка Redux
+
+1. Установить нужные пакеты
+```shell
+npm install next-redux-wrapper react-redux --save
+```
+2. Создать папку redux в корне проекта
+```shell
+project_name/redux
+```
+3. В папке redux создать файл types.ts с следующим содержимым
+```js
+// redux/types.ts
+
+export interface IFirstReducer {
+  counter: number;
+}
+
+export interface IRootState {
+  first: IFirstReducer;
+}
+```
+4. В папке redux создать папку reducers с двумя файлами в ней - index.ts и firstReducer.ts
+```js
+// redux/reducers/firstReducer.ts
+
+import { AnyAction } from 'redux';
+import { IFirstReducer } from '../types';
+
+const initialState: IFirstReducer = {
+  counter: 0,
+};
+
+const firstReducer = (state = initialState, action: AnyAction) => {
+  switch (action.type) {
+    case 'INCREMENT': {
+      return { ...state, counter: state.counter + 1 };
+    }
+    case 'DECREMENT': {
+      return { ...state, counter: state.counter - 1 };
+    }
+    default:
+      return state;
+  }
+};
+
+export default firstReducer;
+```
+
+```js
+// redux/reducers/index.ts
+
+import { AnyAction, combineReducers } from 'redux';
+import { HYDRATE } from 'next-redux-wrapper';
+import { IRootState } from '../types';
+import firstReducer from './firstReducer';
+
+const combineReducer = combineReducers({
+  first: firstReducer,
+});
+
+export const rootReducer = (state: IRootState | undefined, action: AnyAction) => {
+  if (action.type === HYDRATE) {
+    return {
+      ...state,
+      ...action.payload,
+    };
+  }
+  return combineReducer(state, action);
+};
+
+export type RootState = ReturnType<typeof combineReducer>;
+```
+5. В папке redux создать файла store.ts
+```js
+// redux/store.ts
+
+import { createWrapper, MakeStore } from 'next-redux-wrapper';
+import { createStore } from 'redux';
+import { rootReducer } from './reducers';
+import { IRootState } from './types';
+
+const makeStore: MakeStore<IRootState | any> = () =>
+  createStore(rootReducer);
+
+const wrapper = createWrapper<IRootState | any>(makeStore);
+
+export default wrapper;
+```
+6. Обернуть myApp с помощью созданного wrapper'a
+```js
+// pages/app.tsx
+
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import wrapper from "../redux/store";
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+export default wrapper.withRedux(MyApp);
+```
+
+### Настройка Redux DevTools (опциальньно)
+1. Установить расширение для браузера ([Chrome](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/reduxdevtools/))
+2. Установить redux-devtools-extension
+```shell
+npm install --save redux-devtools-extension
+```
+3. Изменить файл store.ts следующим образом
+```js
+// redux/store.ts
+
+import { createWrapper, MakeStore } from "next-redux-wrapper";
+import { devToolsEnhancer } from "redux-devtools-extension";
+import { createStore } from "redux";
+import { rootReducer } from "./reducers";
+import { IRootState } from "./types";
+
+const devTools: any = process.env.NODE_ENV !== "production" && devToolsEnhancer({});
+
+const makeStore: MakeStore<IRootState | any> = () =>
+  createStore(rootReducer, devTools);
+
+const wrapper = createWrapper<IRootState | any>(makeStore);
+
+export default wrapper;
+```
