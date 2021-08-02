@@ -21,7 +21,7 @@ npx eslint --init
 ### Настройка prettier
 
 ```shell
-npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
+npm install --save-dev prettier eslint-config-prettier eslint-config-airbnb eslint-plugin-prettier
 ```
 
 Создать файл `.prettierrc` в корне проекта
