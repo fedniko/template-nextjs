@@ -236,7 +236,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 export default wrapper.withRedux(MyApp);
 ```
 
-### Настройка Redux DevTools (опциальньно)
+### Настройка Redux DevTools (опционально)
 1. Установить расширение для браузера ([Chrome](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/reduxdevtools/))
 2. Установить redux-devtools-extension
 ```shell
